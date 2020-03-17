@@ -5,7 +5,7 @@ using UnityEngine;
 public class MoveWall : MonoBehaviour
 {
     private Rigidbody wallBody;
-    [SerializeField] private float speed = 1.0f;
+    [SerializeField] private float speed = 10f;
 
     // Start is called before the first frame update
     void Start()
