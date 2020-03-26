@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Y_waarde
+  - X_waarde
   layers:
   - Default
   - TransparentFX

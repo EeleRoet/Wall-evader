@@ -1629,6 +1629,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da41d407f26bc1f429b4ba4ef984baa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  randomY: 0
+  xWaarde: 0
+  hellingsGetal: 0
 --- !u!43 &256058543
 Mesh:
   m_ObjectHideFlags: 0
@@ -4967,7 +4970,7 @@ GameObject:
   - component: {fileID: 377827406}
   m_Layer: 5
   m_Name: X2
-  m_TagString: Untagged
+  m_TagString: X_waarde
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5468,7 +5471,7 @@ GameObject:
   - component: {fileID: 413638903}
   m_Layer: 5
   m_Name: X1
-  m_TagString: Untagged
+  m_TagString: X_waarde
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8164,7 +8167,7 @@ GameObject:
   - component: {fileID: 844231692}
   m_Layer: 5
   m_Name: X5
-  m_TagString: Untagged
+  m_TagString: X_waarde
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11615,7 +11618,7 @@ GameObject:
   - component: {fileID: 1683940244}
   m_Layer: 5
   m_Name: X4
-  m_TagString: Untagged
+  m_TagString: X_waarde
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12509,7 +12512,7 @@ GameObject:
   - component: {fileID: 1936912675}
   m_Layer: 5
   m_Name: X3
-  m_TagString: Untagged
+  m_TagString: X_waarde
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
