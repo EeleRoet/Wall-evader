@@ -24,6 +24,7 @@ public class playerInput : MonoBehaviour
     {
         transform.rotation = new Quaternion(x_change,0,-90,0);
         transform.position = new Vector3(-0.6f, 0.5f+verhoging, 2f);
+        
     }
 
     private void Reset()

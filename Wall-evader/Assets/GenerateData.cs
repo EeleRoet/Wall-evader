@@ -8,16 +8,34 @@ public class GenerateData : MonoBehaviour
     Text text;
     Text[] data;
 
-    public float randomY, xWaarde, hellingsGetal;
+    public float randomY, xWaarde, hellingsGetal, startgetal;
     
     // Start is called before the first frame update
     void Start()
     {
-        data = GetComponentsInChildren<Text>();
+        
+    }
 
+    public void GenerateNewData()
+    {
         randomY = Random.Range(0, 5);
-        xWaarde = 0;
+        startgetal = randomY;
         hellingsGetal = (float)System.Math.Round(Mathf.Tan(Random.RandomRange(0, 80) / 180f * Mathf.PI), 1);
+
+        if (Random.Range(0.0f, 1.0f) > 0.5)
+        {
+            hellingsGetal *= -1;
+        }
+        Debug.Log(randomY);
+
+        FillTabel();
+    }
+
+    private void FillTabel()
+    {
+        data = GetComponentsInChildren<Text>();
+        xWaarde = 0;
+       
 
         foreach (Text item in data)
         {
@@ -31,20 +49,6 @@ public class GenerateData : MonoBehaviour
                 item.text = xWaarde.ToString();
                 xWaarde += 1;
             }
-        }
-        GenerateNewData();
-        Debug.Log(randomY);
-        Debug.Log(hellingsGetal);
-    }
-
-    public void GenerateNewData()
-    {
-        randomY = Random.Range(0, 5);
-        hellingsGetal = (float)System.Math.Round(Mathf.Tan(Random.RandomRange(0, 80) / 180f * Mathf.PI), 1);
-
-        if (Random.Range(0, 1) == 0)
-        {
-            hellingsGetal *= -1;
         }
     }
 }
