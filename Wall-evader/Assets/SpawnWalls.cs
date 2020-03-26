@@ -6,13 +6,14 @@ public class SpawnWalls : MonoBehaviour
 {
     [SerializeField] private GameObject wallPrefab;
     [SerializeField] private Transform spawnPosition;
-    [SerializeField] private float unitToForm = 10.0f; //converts in-script units to formula integers.
+    private float unitToForm = 0.8f; //converts in-script units to formula integers.
    //[SerializeField] private Formulescript formulescript;
+
 
     // Start is called before the first frame update
     void Start()
     { 
-        GameObject newWall = Instantiate(wallPrefab, spawnPosition.position, Quaternion.identity);
+        GameObject newWall = Instantiate(wallPrefab, spawnPosition.position + (Vector3.up * (5 * unitToForm)), Quaternion.identity);
         GetFirstChildren(newWall.transform)[0].Rotate(Vector3.forward * (Mathf.Atan(0f) * Mathf.Rad2Deg + 90));
     }
 
@@ -25,7 +26,7 @@ public class SpawnWalls : MonoBehaviour
         }
     }
 
-    public void SpawnWall(float helling, float start)
+    public void SpawnWall(GameObject wallPrefab,float helling, float start)
     {
         GameObject newWall = Instantiate(wallPrefab, spawnPosition.position + (Vector3.up * (start * unitToForm)), Quaternion.identity);
         GetFirstChildren(newWall.transform)[0].Rotate(Vector3.forward * (Mathf.Atan(helling) * Mathf.Rad2Deg + 90));
