@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class OnTrigger : MonoBehaviour
 {
-     public SpawnWalls spawnWallScript;
-    public GameObject wallPrefab;
+    [SerializeField] private SpawnWalls spawnWallScript;
+    [SerializeField] private GameObject wallPrefab;
     //[SerializeField] private NumberGeneratorScipt numberGeneratorScript;
    private void OnTriggerEnter(Collider other)
     {

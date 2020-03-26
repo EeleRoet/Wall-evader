@@ -1096,8 +1096,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44653d9b47cf4024c96961e3feac443b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnWallScript: {fileID: 0}
-  wallPrefab: {fileID: 0}
+  spawnWallScript: {fileID: 1746131242}
+  wallPrefab: {fileID: 2988770198106729671, guid: eef34ee818fe27e499de2a59f78032c7,
+    type: 3}
 --- !u!65 &88157698
 BoxCollider:
   m_ObjectHideFlags: 0
