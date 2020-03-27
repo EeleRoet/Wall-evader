@@ -35,7 +35,7 @@ public class SpawnWalls : MonoBehaviour
     }
 
 
-    //method from stackoverflow answer at: 
+    //method from stackoverflow answer by: Gab_Ris at: 
     //https://answers.unity.com/questions/496958/how-can-i-get-only-the-childrens-of-a-gameonbject.html
     private Transform[] GetFirstChildren(Transform parent)
     {
