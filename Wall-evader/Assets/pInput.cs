@@ -33,7 +33,7 @@ public class pInput : MonoBehaviour
     void Update()
     {
 
-        transform.eulerAngles
+        
             transform.Rotate((new Vector3(0, 0, rotate)), Space.Self);
             target.position = new Vector3(-0.6f, 0.5f + verhoging, 2f);
         
