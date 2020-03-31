@@ -26,7 +26,6 @@ public class GenerateData : MonoBehaviour
         {
             hellingsGetal *= -1;
         }
-        Debug.Log(randomY);
 
         FillTabel();
     }

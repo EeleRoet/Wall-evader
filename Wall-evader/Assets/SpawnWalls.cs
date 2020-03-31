@@ -29,7 +29,6 @@ public class SpawnWalls : MonoBehaviour
 
     public void SpawnWall(GameObject wallPrefab,float helling, float start)
     {
-        Debug.Log(start);
         GameObject newWall = Instantiate(wallPrefab, spawnPosition.position + (Vector3.up * (start * unitToForm)), Quaternion.identity);
         GetFirstChildren(newWall.transform)[0].Rotate(Vector3.forward * (Mathf.Atan(helling) * Mathf.Rad2Deg + 90));
     }
