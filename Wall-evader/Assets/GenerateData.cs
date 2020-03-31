@@ -8,7 +8,7 @@ public class GenerateData : MonoBehaviour
     Text text;
     Text[] data;
 
-    public float randomY, xWaarde, hellingsGetal, startgetal;
+    public float randomY, hellingsGetal, startgetal;
     
     // Start is called before the first frame update
     void Start()
@@ -32,9 +32,7 @@ public class GenerateData : MonoBehaviour
 
     private void FillTabel()
     {
-        data = GetComponentsInChildren<Text>();
-        xWaarde = 0;
-       
+        data = GetComponentsInChildren<Text>();       
 
         foreach (Text item in data)
         {
@@ -42,11 +40,6 @@ public class GenerateData : MonoBehaviour
             {
                 item.text = randomY.ToString();
                 randomY += hellingsGetal;
-            }
-            if (item.tag == "X_waarde")
-            {
-                item.text = xWaarde.ToString();
-                xWaarde += 1;
             }
         }
     }
