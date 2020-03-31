@@ -9,11 +9,12 @@ public class pInput : MonoBehaviour
     public Rigidbody rbody;
     public Transform target;
     public Slider slide;
-    Vector3 position;
+    public Slider slide_verhoging;
+    
 
-    int verhoging = 0;
-    int rotate;
-
+    public float verhoging = 0;
+    public Vector3 rotate;
+    public Vector3 currentRotation;
 
     // Start is called before the first frame update
     void Start()
@@ -21,29 +22,42 @@ public class pInput : MonoBehaviour
 
         target = GetComponent<Transform>();
         rbody = GetComponent<Rigidbody>();
-        
+
+        this.target.eulerAngles = currentRotation;
 
 
-
-        target.position = new Vector3(-0.6f, 0.5f, 2f);
+        target.position = new Vector3(0f, 0.5f, -4.25f);
 
     }
+
+
 
     // Update is called once per frame
     void Update()
     {
 
-        
-            transform.Rotate((new Vector3(0, 0, rotate)), Space.Self);
-            target.position = new Vector3(-0.6f, 0.5f + verhoging, 2f);
-        
+        rotate = Vector3.forward * (Mathf.Atan(slide.value) * Mathf.Rad2Deg + 90);
+        verhoging = slide_verhoging.value*0.8f;
+
+        target.position = new Vector3(0f, 0.5f + verhoging, -4.25f);
+
+        currentRotation = rotate;
+
+        if(rotate.z >= target.rotation.z || rotate.z <= target.rotation.z)
+        {
+            Reset();
+        }
 
 
-        rotate = (int)Mathf.Cos(slide.value);
-    }
+}
 
-    private void Reset()
+
+
+
+    public void Reset()
     {
+
+        this.target.eulerAngles = currentRotation;
 
     }
 }
