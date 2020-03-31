@@ -31,16 +31,6 @@ public class PauseMenu : MonoBehaviour
                 Pause();
             }
         }
-        /*
-        if (playerhealth == 0)
-        {
-            gameIsOver = true;
-                if(gameIsOver)
-                {
-                    GameOver();
-                }
-        }
-        */
     }
     public void Resume()
     {
@@ -56,7 +46,7 @@ public class PauseMenu : MonoBehaviour
         gameIsPaused = true;
     }
 
-    void GameOver()
+    public void GameOver()
     {
         GameOverMenuUI.SetActive(true);
         Time.timeScale = 0f;

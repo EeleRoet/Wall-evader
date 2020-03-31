@@ -1,5 +1,57 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!65 &197368675025666077
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2988770197757653405}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.94271094, y: 0.5623493, z: 0.50000036}
+  m_Center: {x: -0.017226964, y: 0.8750024, z: 0}
+--- !u!65 &2996179033494164047
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2988770197757653405}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6459532, y: 1.1838262, z: 0.50000036}
+  m_Center: {x: 0.7745161, y: -0.00000011920929, z: 0}
+--- !u!65 &4274540448375366018
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2988770197757653405}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5710416, y: 1.1897558, z: 0.50000036}
+  m_Center: {x: -0.79041886, y: -0.0029646754, z: 0}
+--- !u!65 &8223910275757142383
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2988770197757653405}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.96073943, y: 0.53169703, z: 0.50000036}
+  m_Center: {x: -0.023303956, y: -0.85967743, z: 0}
 --- !u!1 &2988770198106729671
 GameObject:
   m_ObjectHideFlags: 0
@@ -15,6 +67,7 @@ GameObject:
   - component: {fileID: 5900472114856394877}
   - component: {fileID: 6800031731036528367}
   - component: {fileID: 8066595757319879305}
+  - component: {fileID: 4696954836919426797}
   m_Layer: 0
   m_Name: Holed Wall
   m_TagString: Untagged
@@ -15597,7 +15650,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31d771f13b74a7b4490122741ae933c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5.04
+  speed: 4
 --- !u!54 &6800031731036528367
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -15625,8 +15678,21 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3, y: 5.5, z: 0.50000036}
-  m_Center: {x: 0, y: -3.55, z: 0}
+  m_Size: {x: 3, y: 5.0185804, z: 0.50000036}
+  m_Center: {x: 0, y: -3.79071, z: 0}
+--- !u!65 &4696954836919426797
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2988770198106729671}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3, y: 5.7625923, z: 0.50000036}
+  m_Center: {x: 0, y: 4.1487036, z: 0}
 --- !u!1001 &6925504172133329056
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15701,6 +15767,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e02d5a7c096043c4fa9c4b82ee0aac34, type: 3}
+--- !u!1 &2988770197757653405 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5289033503392946493, guid: e02d5a7c096043c4fa9c4b82ee0aac34,
+    type: 3}
+  m_PrefabInstance: {fileID: 6925504172133329056}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2988770197757653406 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5289033503392946494, guid: e02d5a7c096043c4fa9c4b82ee0aac34,
