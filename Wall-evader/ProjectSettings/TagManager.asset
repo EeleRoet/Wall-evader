@@ -6,9 +6,6 @@ TagManager:
   tags:
   - Y_waarde
   - X_waarde
-  - Y_waarde1
-  - Y_waarde2
-  - Y_waarde3
   layers:
   - Default
   - TransparentFX
