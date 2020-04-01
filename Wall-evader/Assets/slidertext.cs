@@ -12,11 +12,12 @@ public class slidertext : MonoBehaviour
     void Start()
     {
         sliderText = GetComponent<Text>();
+        
     }
 
     // Update is called once per frame
     public void textUpdate(float value)
     {
-        sliderText.text = value.ToString();
+        sliderText.text = (value/10).ToString();
     }
 }

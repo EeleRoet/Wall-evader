@@ -36,7 +36,7 @@ public class pInput : MonoBehaviour
     void Update()
     {
 
-        rotate = Vector3.forward * (Mathf.Atan(slide.value) * Mathf.Rad2Deg + 90);
+        rotate = Vector3.forward * (Mathf.Atan(slide.value/10) * Mathf.Rad2Deg + 90);
         verhoging = slide_verhoging.value*0.8f;
 
         target.position = new Vector3(0f, 0.5f + verhoging, -4.25f);
