@@ -22,9 +22,9 @@ public class GenerateData : MonoBehaviour
             hellingsGetal *= -1;
         }
 
-        y_waarde1 = startgetal;
-        y_waarde2 = startgetal + hellingsGetal * 3;
-        y_waarde3 = startgetal + hellingsGetal * 4;
+        y_waarde1 = (float)System.Math.Round(startgetal + hellingsGetal,1);
+        y_waarde2 = (float)System.Math.Round(startgetal + hellingsGetal * 3, 1);
+        y_waarde3 = (float)System.Math.Round(startgetal + hellingsGetal * 4, 1);
         
         FillTabel();
     }
