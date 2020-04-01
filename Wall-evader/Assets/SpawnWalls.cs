@@ -20,10 +20,7 @@ public class SpawnWalls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ( Input.GetKeyDown(KeyCode.Space))
-        {
-            Instantiate(wallPrefab, spawnPosition.position, Quaternion.identity);
-        }
+        
     }
 
     public void SpawnWall(GameObject wallPrefab,float helling, float start)
