@@ -15,13 +15,13 @@ public class ScoreScript : MonoBehaviour
         score = 0;
         scoreText = GetChildComponentByName<Text>("score");
         highscoreText = GetChildComponentByName<Text>("highscore");
-        highscoreText.text = "highscore: " + PlayerPrefs.GetInt("highscore", 0);
+        highscoreText.text = "Top: " + PlayerPrefs.GetInt("highscore", 0);
     }
 
     // Update is called once per frame
     void Update()
     {
-        scoreText.text = "score: " + score;
+        scoreText.text = score.ToString();
        
     }
 
@@ -31,7 +31,7 @@ public class ScoreScript : MonoBehaviour
         if ( score > PlayerPrefs.GetInt("highscore", 0))
         {
             PlayerPrefs.SetInt("highscore", score);
-            highscoreText.text = "highscore: " + score;
+            highscoreText.text = "Top: " + score;
         }
     }
 
