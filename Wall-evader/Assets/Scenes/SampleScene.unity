@@ -1362,6 +1362,7 @@ MonoBehaviour:
   wallPrefab: {fileID: 2988770198106729671, guid: eef34ee818fe27e499de2a59f78032c7,
     type: 3}
   dataScript: {fileID: 252347000}
+  dynamicCamera: {fileID: 0}
   pIn: {fileID: 0}
 --- !u!1 &129161016
 GameObject:
@@ -9566,7 +9567,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 504, y: -6}
+  m_AnchoredPosition: {x: 515, y: -6}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1059040617
@@ -9600,7 +9601,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: '?'
+  m_Text: 0
 --- !u!222 &1059040618
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15344,7 +15345,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: '?'
+  m_Text: 0
 --- !u!222 &1995628492
 CanvasRenderer:
   m_ObjectHideFlags: 0
