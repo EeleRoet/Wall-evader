@@ -10,11 +10,11 @@ public class pInput : MonoBehaviour
     public Transform target;
     public Slider slide;
     public Slider slide_verhoging;
-    public float timer;
+    public int timer = 0;
     public bool active = true;
     public bool resetTimer = false;
 
-    OnSpawnTrigger onST;
+   
 
     public float verhoging = 0;
     public Vector3 rotate;
@@ -56,11 +56,14 @@ public class pInput : MonoBehaviour
 
 
 
-        timer += 1 / 60;
+        timer++;
 
-        if(timer >= 2)
+        if(timer >= 300 && active == true)
         {
+            slide.interactable = false;
+            slide_verhoging.interactable = false;
             active = false;
+            Debug.Log("nice");
         }
 
         if(resetTimer == true)
@@ -68,7 +71,7 @@ public class pInput : MonoBehaviour
             timerReset();
         }
 
-        
+ 
 }
 
 
@@ -76,7 +79,7 @@ public class pInput : MonoBehaviour
     {
 
         timer = 0;
-        active = true;
+        slide.interactable = true;
         resetTimer = false;
 
     }
