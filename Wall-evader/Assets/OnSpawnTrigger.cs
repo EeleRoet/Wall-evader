@@ -11,7 +11,7 @@ public class OnSpawnTrigger : MonoBehaviour
     {
         Destroy(other.gameObject);
         dataScript.GenerateNewData();
-        spawnWallScript.SpawnWall(wallPrefab, dataScript.hellingsGetal, dataScript.startgetal);
+        spawnWallScript.SpawnWall(dataScript.hellingsGetal, dataScript.startgetal);
         pIn.resetTimer = true;
     }
 }

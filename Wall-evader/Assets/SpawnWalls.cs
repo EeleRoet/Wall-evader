@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnWalls : MonoBehaviour
 {
-    [SerializeField] private GameObject wallPrefab;
+    [SerializeField] private GameObject wall;
     [SerializeField] private Transform spawnPosition;
     private float unitToForm = 0.8f; //converts in-script units to formula integers.
     [SerializeField] private GenerateData dataScript;
@@ -14,7 +14,7 @@ public class SpawnWalls : MonoBehaviour
     void Start()
     {
         dataScript.GenerateNewData();
-        SpawnWall(wallPrefab, dataScript.hellingsGetal, dataScript.startgetal);
+        SpawnWall(dataScript.hellingsGetal, dataScript.startgetal);
     }
 
     // Update is called once per frame
@@ -23,10 +23,10 @@ public class SpawnWalls : MonoBehaviour
         
     }
 
-    public void SpawnWall(GameObject wallPrefab,float helling, float start)
+    public void SpawnWall(float helling, float start)
     {
-        GameObject newWall = Instantiate(wallPrefab, spawnPosition.position + (Vector3.up * (start * unitToForm)), Quaternion.identity);
-        GetFirstChildren(newWall.transform)[0].Rotate(Vector3.forward * (Mathf.Atan(helling) * Mathf.Rad2Deg + 90));
+        wall.transform.position = spawnPosition.position + (Vector3.up * (start * unitToForm));
+        GetFirstChildren(wall.transform)[0].Rotate(Vector3.forward * (Mathf.Atan(helling) * Mathf.Rad2Deg + 90));
     }
 
 

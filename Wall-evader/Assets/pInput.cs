@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class pInput : MonoBehaviour
 {
-
+    public viewObstructionScript viewScript;
     public Rigidbody rbody;
     public Transform target;
     public Slider slide;
@@ -63,7 +63,7 @@ public class pInput : MonoBehaviour
             slide.interactable = false;
             slide_verhoging.interactable = false;
             active = false;
-            Debug.Log("nice");
+            viewScript.destroyObstruction();
         }
 
         if(resetTimer == true)
