@@ -10,7 +10,11 @@ public class pInput : MonoBehaviour
     public Transform target;
     public Slider slide;
     public Slider slide_verhoging;
-    
+    public float timer;
+    public bool active = true;
+    public bool resetTimer = false;
+
+    OnSpawnTrigger onST;
 
     public float verhoging = 0;
     public Vector3 rotate;
@@ -43,16 +47,39 @@ public class pInput : MonoBehaviour
 
         currentRotation = rotate;
 
-        if(rotate.z >= target.rotation.z || rotate.z <= target.rotation.z)
+        if(rotate.z >= target.rotation.z || rotate.z <= target.rotation.z )
         {
-            Reset();
+
+                Reset();
+
         }
 
 
+
+        timer += 1 / 60;
+
+        if(timer >= 2)
+        {
+            active = false;
+        }
+
+        if(resetTimer == true)
+        {
+            timerReset();
+        }
+
+        
 }
 
 
+    public void timerReset()
+    {
 
+        timer = 0;
+        active = true;
+        resetTimer = false;
+
+    }
 
     public void Reset()
     {
