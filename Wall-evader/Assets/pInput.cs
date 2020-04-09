@@ -58,12 +58,12 @@ public class pInput : MonoBehaviour
 
         timer++;
 
-        if(timer >= 300 && active == true)
+        if(timer >= 1000 && active == true)
         {
             slide.interactable = false;
             slide_verhoging.interactable = false;
             active = false;
-            viewScript.destroyObstruction();
+            viewScript.destroyObstruction();            
         }
 
         if(resetTimer == true)
