@@ -46,6 +46,7 @@ public class pInput : MonoBehaviour
         target.position = new Vector3(0f, 0.5f + verhoging, -4.25f);
 
         currentRotation = rotate;
+        
 
         if(rotate.z >= target.rotation.z || rotate.z <= target.rotation.z )
         {

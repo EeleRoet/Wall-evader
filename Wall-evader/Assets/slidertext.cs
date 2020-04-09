@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class slidertext : MonoBehaviour
 {
     Text sliderText;
+    [SerializeField] private Text hellingsgetal;
     
 
     // Start is called before the first frame update
@@ -19,5 +20,7 @@ public class slidertext : MonoBehaviour
     public void textUpdate(float value)
     {
         sliderText.text = (value/10).ToString();
+        hellingsgetal.text = (value/10).ToString();
+
     }
 }
