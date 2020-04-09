@@ -10,7 +10,7 @@ public class OnSpawnTrigger : MonoBehaviour
     public pInput pIn;
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(other.gameObject);
+       
         dataScript.GenerateNewData();
         spawnWallScript.SpawnWall(dataScript.hellingsGetal, dataScript.startgetal);
         pIn.resetTimer = true;
