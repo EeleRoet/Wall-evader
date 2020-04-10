@@ -10,7 +10,7 @@ public class pInput : MonoBehaviour
     public Transform target;
     public Slider slide;
     public Slider slide_verhoging;
-    public float timer = 0.0f;
+    public float timer;
     public bool active = true;
     public bool resetTimer = false;
     public Button button;
@@ -24,7 +24,7 @@ public class pInput : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        timer = 9;
         target = GetComponent<Transform>();
         rbody = GetComponent<Rigidbody>();
 
@@ -58,9 +58,9 @@ public class pInput : MonoBehaviour
 
 
 
-        timer+= Time.deltaTime;
+        timer -= Time.deltaTime;
 
-        if(timer >= 9 && active == true)
+        if(timer <= 0 && active == true)
         {
             slide.interactable = false;
             slide_verhoging.interactable = false;
@@ -95,7 +95,7 @@ public class pInput : MonoBehaviour
     public void timerReset()
     {
 
-        timer = 0;
+        timer = 9f;
         slide.interactable = true;
         slide_verhoging.interactable = true;
         resetTimer = false;
