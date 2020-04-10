@@ -59,7 +59,7 @@ public class pInput : MonoBehaviour
 
         timer+= Time.deltaTime;
 
-        if(timer >= 5 && active == true)
+        if(timer >= 9 && active == true)
         {
             slide.interactable = false;
             slide_verhoging.interactable = false;
@@ -71,9 +71,11 @@ public class pInput : MonoBehaviour
         {
             Debug.Log("nice");
             timerReset();
+            resetTimer = false;
+            active = true;
         }
 
- 
+        Debug.Log("0"+timer);
 }
 
 
