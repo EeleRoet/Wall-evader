@@ -68,6 +68,7 @@ public class pInput : MonoBehaviour
 
         if(resetTimer == true)
         {
+            Debug.Log("nice");
             timerReset();
         }
 
