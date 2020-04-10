@@ -13,6 +13,7 @@ public class pInput : MonoBehaviour
     public float timer = 0.0f;
     public bool active = true;
     public bool resetTimer = false;
+    public Button button;
 
    
 
@@ -69,14 +70,22 @@ public class pInput : MonoBehaviour
 
         if(resetTimer == true)
         {
-            Debug.Log("nice");
+            
             timerReset();
-            resetTimer = false;
-            active = true;
+            
         }
 
         Debug.Log("0"+timer);
-}
+
+
+        button.onClick
+        {
+
+
+        }
+            
+            
+    }
 
 
     public void timerReset()
@@ -86,6 +95,15 @@ public class pInput : MonoBehaviour
         slide.interactable = true;
         slide_verhoging.interactable = true;
         resetTimer = false;
+        active = true;
+        Debug.Log("nice");
+
+    }
+
+    public void buttonStop()
+    {
+
+        
 
     }
 
