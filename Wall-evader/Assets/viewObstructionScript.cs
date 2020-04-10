@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class viewObstructionScript : MonoBehaviour
 { 
-    public void destroyObstruction()
+    public void deactivateObstruction()
     {
-        Destroy(gameObject);
+        gameObject.active = false;
        
+    }
+
+    public void activateObstruction()
+    {
+        gameObject.active = true;
     }
 
 }

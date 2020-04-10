@@ -9,11 +9,10 @@ public class OnSpawnTrigger : MonoBehaviour
     [SerializeField] private GenerateData dataScript;
     [SerializeField] private DynamicCamera dynamicCamera;
     public pInput pIn;
+
     private void OnTriggerEnter(Collider other)
     {
-       
-        dataScript.GenerateNewData();
-        spawnWallScript.SpawnWall(dataScript.hellingsGetal, dataScript.startgetal);
+        spawnWallScript.SpawnWall();
         pIn.resetTimer = true;
         dynamicCamera.zoomIn = false;
     }

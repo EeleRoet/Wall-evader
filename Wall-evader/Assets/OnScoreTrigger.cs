@@ -12,7 +12,7 @@ public class OnScoreTrigger : MonoBehaviour
    private void OnTriggerEnter(Collider other)
    {
         ScoreScript.AddMarginScore(dataScript.hellingsGetal, inclineSlider.value);
-        Debug.Log("jeff");
+        
 
    }
 }

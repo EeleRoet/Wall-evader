@@ -13,8 +13,8 @@ public class SpawnWalls : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        dataScript.GenerateNewData();
-        SpawnWall(dataScript.hellingsGetal, dataScript.startgetal);
+        
+        SpawnWall();
     }
 
     // Update is called once per frame
@@ -23,13 +23,17 @@ public class SpawnWalls : MonoBehaviour
         
     }
 
-    public void SpawnWall(float helling, float start)
+    public void SpawnWall()
     {
-        wall.transform.position = spawnPosition.position + (Vector3.up * (start * unitToForm));
-        GetFirstChildren(wall.transform)[0].Rotate(Vector3.forward * (Mathf.Atan(helling) * Mathf.Rad2Deg + 90));
+        dataScript.GenerateNewData();
+
+
+        wall.transform.position = spawnPosition.position + (Vector3.up * (dataScript.startgetal * unitToForm));
+        GetFirstChildren(wall.transform)[0].eulerAngles = new Vector3(0, 0, 0);
+        GetFirstChildren(wall.transform)[0].Rotate(Vector3.forward * (Mathf.Atan(dataScript.hellingsGetal) * Mathf.Rad2Deg + 90));
+
+
     }
-
-
     //method from stackoverflow answer by: Gab_Ris at: 
     //https://answers.unity.com/questions/496958/how-can-i-get-only-the-childrens-of-a-gameonbject.html
     private Transform[] GetFirstChildren(Transform parent)

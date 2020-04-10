@@ -9,11 +9,11 @@ public class ScoreScript : MonoBehaviour
     static Text scoreText;
     static Text streakText;
 
-    private static float score;
-    private static float streakMultiplier;
-    private static float inclineMargin;
-    private static float baseScore;
-    private static float timeLeft;
+    private static float score;             //current playerscore displayed top-right
+    private static float streakMultiplier;  //current streak-value: used to calculate score and displayed top-right
+    private static float inclineMargin;     //difference in playeranswer and actual answer: used to calculate score
+    private static float baseScore;         //score for perfect anser: used to calculate score
+    private static float timeLeft;          //amount of time left when answer was given: used to calculate score and displayed middle left
 
     // Start is called before the first frame update
     public void Start()
@@ -37,6 +37,11 @@ public class ScoreScript : MonoBehaviour
 
     public static void AddTimerScore(int time)
     {
+        if(time == 0)
+        {
+            time++;
+        }
+
         timeLeft = time;
     }
 

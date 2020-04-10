@@ -64,18 +64,19 @@ public class pInput : MonoBehaviour
             slide.interactable = false;
             slide_verhoging.interactable = false;
             active = false;
-            viewScript.destroyObstruction();            
+            viewScript.deactivateObstruction();
+            ScoreScript.AddTimerScore((int)timer);
         }
 
         if(resetTimer == true)
         {
-            Debug.Log("nice");
+            
             timerReset();
             resetTimer = false;
             active = true;
         }
 
-        Debug.Log("0"+timer);
+       // Debug.Log("0"+timer);
 }
 
 
@@ -86,6 +87,7 @@ public class pInput : MonoBehaviour
         slide.interactable = true;
         slide_verhoging.interactable = true;
         resetTimer = false;
+        viewScript.activateObstruction();
 
     }
 
