@@ -82,6 +82,7 @@ public class pInput : MonoBehaviour
 
         timer = 0;
         slide.interactable = true;
+        slide_verhoging.interactable = false;
         resetTimer = false;
 
     }
