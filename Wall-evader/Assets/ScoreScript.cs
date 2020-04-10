@@ -5,33 +5,69 @@ using UnityEngine.UI;
 
 public class ScoreScript : MonoBehaviour
 {
-    public static int score;
+    
     static Text scoreText;
-    static Text highscoreText;
+    static Text streakText;
+
+    private static float score;
+    private static float streakMultiplier;
+    private static float inclineMargin;
+    private static float baseScore;
+    private static float timeLeft;
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
+        timeLeft = 1;
+        baseScore = 10;
         score = 0;
+        streakMultiplier = 1;
         scoreText = GetChildComponentByName<Text>("score");
-        highscoreText = GetChildComponentByName<Text>("highscore");
-        highscoreText.text = "Top: " + PlayerPrefs.GetInt("highscore", 0);
+        scoreText.text = "0";
+        streakText = GetChildComponentByName<Text>("streak");
+        streakText.text = "streak: " + streakMultiplier;
     }
 
     // Update is called once per frame
     void Update()
     {
         scoreText.text = score.ToString();
-       
+        streakText.text = "streak: " + (streakMultiplier - 1);
     }
 
-    public static void AddScore()
+    public static void AddTimerScore(int time)
     {
-        score++;
-        if ( score > PlayerPrefs.GetInt("highscore", 0))
+        timeLeft = time;
+    }
+
+    public static void AddMarginScore(float wallIncline, float inputIncline)
+    {
+        float tempScore;
+
+        inputIncline /= 10;//reverts input value to decimal float
+        inclineMargin = Mathf.Abs(wallIncline - inputIncline);//sets inclineMargin to the difference of the parameters
+        inclineMargin *= 10;//converts inlcine margin to an integer
+
+        if ( inclineMargin == 0)
         {
-            PlayerPrefs.SetInt("highscore", score);
-            highscoreText.text = "Top: " + score;
+            streakMultiplier++;
+        }
+        else
+        {
+            streakMultiplier = 1;
+        }
+        inclineMargin++;//adds 1 to avoid deviding by 0
+        tempScore = timeLeft * (baseScore / inclineMargin) * streakMultiplier;
+        score += tempScore;
+
+        checkHigherScore();
+    }
+
+    private static void checkHigherScore()
+    {
+        if (score > PlayerPrefs.GetFloat("highscore", 0))
+        {
+            PlayerPrefs.SetFloat("highscore", score);
         }
     }
 
