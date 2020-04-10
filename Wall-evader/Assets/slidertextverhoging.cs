@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class slidertextverhoging : MonoBehaviour
 {
     Text sliderText;
+    [SerializeField] private Text formuleStartGetal;
 
 
     // Start is called before the first frame update
@@ -19,5 +20,6 @@ public class slidertextverhoging : MonoBehaviour
     public void textUpdate(float value)
     {
         sliderText.text = value.ToString();
+        formuleStartGetal.text = value.ToString();
     }
 }

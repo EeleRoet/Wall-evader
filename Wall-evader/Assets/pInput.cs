@@ -46,6 +46,7 @@ public class pInput : MonoBehaviour
         target.position = new Vector3(0f, 0.5f + verhoging, -4.25f);
 
         currentRotation = rotate;
+        
 
         if(rotate.z >= target.rotation.z || rotate.z <= target.rotation.z )
         {
@@ -58,12 +59,12 @@ public class pInput : MonoBehaviour
 
         timer++;
 
-        if(timer >= 300 && active == true)
+        if(timer >= 1000 && active == true)
         {
             slide.interactable = false;
             slide_verhoging.interactable = false;
             active = false;
-            viewScript.destroyObstruction();
+            viewScript.destroyObstruction();            
         }
 
         if(resetTimer == true)
