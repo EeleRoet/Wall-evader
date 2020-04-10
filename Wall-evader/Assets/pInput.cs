@@ -10,7 +10,7 @@ public class pInput : MonoBehaviour
     public Transform target;
     public Slider slide;
     public Slider slide_verhoging;
-    public int timer = 0;
+    public float timer = 0.0f;
     public bool active = true;
     public bool resetTimer = false;
 
@@ -57,9 +57,9 @@ public class pInput : MonoBehaviour
 
 
 
-        timer++;
+        timer+= Time.deltaTime;
 
-        if(timer >= 1000 && active == true)
+        if(timer >= 5 && active == true)
         {
             slide.interactable = false;
             slide_verhoging.interactable = false;
