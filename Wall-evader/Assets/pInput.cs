@@ -100,7 +100,11 @@ public class pInput : MonoBehaviour
         active = false;
         viewScript.deactivateObstruction();
         ScoreScript.AddTimerScore((int)timer);
+
         //StreakAnimation.StartAnimation();
+
+
+        button.interactable = false;
 
     }
 
