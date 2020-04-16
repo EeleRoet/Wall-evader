@@ -60,13 +60,11 @@ public class pInput : MonoBehaviour
 
         timer -= Time.deltaTime;
 
-        if(timer <= 0 && active == true)
+        if(timer >= 9 && active == true)
         {
-            slide.interactable = false;
-            slide_verhoging.interactable = false;
-            active = false;
-            viewScript.deactivateObstruction();
-            ScoreScript.AddTimerScore((int)timer);
+
+            lockSlider();
+
         }
 
         if(resetTimer == true)
@@ -77,17 +75,32 @@ public class pInput : MonoBehaviour
         }
 
 
+        if (active == true)
 
+        {
 
+            button.onClick.AddListener(lockSlider);
 
-
-       /* button.onClick
+        }
+        else
         {
 
 
-        }*/
-            
-            
+
+        }
+ 
+    }
+
+
+    public void lockSlider()
+    {
+
+        slide.interactable = false;
+        slide_verhoging.interactable = false;
+        active = false;
+        viewScript.deactivateObstruction();
+        ScoreScript.AddTimerScore((int)timer);
+
     }
 
 
