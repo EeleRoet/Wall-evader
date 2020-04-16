@@ -5,7 +5,6 @@ using UnityEngine.UI;
 public class OnSpawnTrigger : MonoBehaviour
 {
     [SerializeField] private SpawnWalls spawnWallScript;
-    [SerializeField] private GameObject wallPrefab;
     [SerializeField] private GenerateData dataScript;
     [SerializeField] private DynamicCamera dynamicCamera;
     public pInput pIn;
@@ -13,6 +12,7 @@ public class OnSpawnTrigger : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         spawnWallScript.SpawnWall();
+        
         pIn.resetTimer = true;
         dynamicCamera.zoomIn = false;
     }

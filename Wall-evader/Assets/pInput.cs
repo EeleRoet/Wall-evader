@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class pInput : MonoBehaviour
 {
+    [SerializeField] private MoveWall moveWallScript;
     public viewObstructionScript viewScript;
     public Rigidbody rbody;
     public Transform target;
@@ -100,7 +101,7 @@ public class pInput : MonoBehaviour
         active = false;
         viewScript.deactivateObstruction();
         ScoreScript.AddTimerScore((int)timer);
-
+        moveWallScript.SetSpeed();
         //StreakAnimation.StartAnimation();
 
 
