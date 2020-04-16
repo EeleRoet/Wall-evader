@@ -60,7 +60,7 @@ public class pInput : MonoBehaviour
 
         timer -= Time.deltaTime;
 
-        if(timer >= 9 && active == true)
+        if(timer <= 0 && active == true)
         {
 
             lockSlider();
@@ -120,13 +120,7 @@ public class pInput : MonoBehaviour
 
     }
 
-    public void buttonStop()
-    {
 
-        
-
-
-    }
 
     public void Reset()
     {
