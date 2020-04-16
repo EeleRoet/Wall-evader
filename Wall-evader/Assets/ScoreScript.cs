@@ -10,6 +10,7 @@ public class ScoreScript : MonoBehaviour
     static Text streakText;
 
     private static float score;             //current playerscore displayed top-right
+    private static float streakCount;
     private static float streakMultiplier;  //current streak-value: used to calculate score and displayed top-right
     private static float inclineMargin;     //difference in playeranswer and actual answer: used to calculate score
     private static float baseScore;         //score for perfect anser: used to calculate score
@@ -21,10 +22,12 @@ public class ScoreScript : MonoBehaviour
         timeLeft = 1;
         baseScore = 10;
         score = 0;
-        streakMultiplier = 1;
+        streakCount = 0;
+        streakMultiplier = 0;
         scoreText = GetChildComponentByName<Text>("score");
         scoreText.text = "0";
         streakText = GetChildComponentByName<Text>("streak");
+        Debug.Log(streakText.text);
         streakText.text = "streak: " + streakMultiplier;
     }
 
@@ -32,7 +35,7 @@ public class ScoreScript : MonoBehaviour
     void Update()
     {
         scoreText.text = score.ToString();
-        streakText.text = "streak: " + (streakMultiplier - 1);
+        streakText.text = "streak: " + (streakMultiplier);
     }
 
     public static void AddTimerScore(int time)
@@ -43,11 +46,14 @@ public class ScoreScript : MonoBehaviour
         }
 
         timeLeft = time;
+        Debug.Log(timeLeft);
+        StreakAnimation.StartAnimation();
     }
 
     public static void AddMarginScore(float wallIncline, float inputIncline)
     {
         float tempScore;
+        float tempStreakMultiplier;
 
         inputIncline /= 10;//reverts input value to decimal float
 
@@ -55,20 +61,32 @@ public class ScoreScript : MonoBehaviour
 
         inclineMargin = Mathf.Abs(wallIncline - inputIncline);//sets inclineMargin to the difference of the parameters
         inclineMargin *= 10;//converts inlcine margin to an integer
+        BumpStreak(inclineMargin);
 
-        if ( inclineMargin == 0)
-        {
-            streakMultiplier++;
-        }
-        else
-        {
-            streakMultiplier = 1;
-        }
         inclineMargin++;//adds 1 to avoid deviding by 0
-        tempScore = timeLeft * (baseScore / inclineMargin) * streakMultiplier;
+        tempStreakMultiplier = streakMultiplier > 0 ? streakMultiplier : 1;
+        tempScore = timeLeft * (baseScore / inclineMargin) * tempStreakMultiplier;
         score += tempScore;
 
         checkHigherScore();
+    }
+
+    private static void BumpStreak(float Margin)
+    {
+        if (Margin == 0)
+        {
+           if(++streakCount > streakMultiplier)
+           {
+                streakMultiplier++;
+                streakCount = 0;
+           }
+        }
+        else
+        {
+            streakCount = 0;
+            streakMultiplier = 0;
+        }
+
     }
 
     private static void checkHigherScore()
