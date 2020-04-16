@@ -50,6 +50,9 @@ public class ScoreScript : MonoBehaviour
         float tempScore;
 
         inputIncline /= 10;//reverts input value to decimal float
+
+        MarginAnimation.StartAnimation(wallIncline - inputIncline);//start animation for margin text on screen
+
         inclineMargin = Mathf.Abs(wallIncline - inputIncline);//sets inclineMargin to the difference of the parameters
         inclineMargin *= 10;//converts inlcine margin to an integer
 

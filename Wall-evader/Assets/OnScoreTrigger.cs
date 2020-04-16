@@ -6,13 +6,12 @@ using UnityEngine.UI;
 
 public class OnScoreTrigger : MonoBehaviour
 {
-   [SerializeField] private GenerateData dataScript;
+    [SerializeField] private GenerateData dataScript;
     [SerializeField] private Slider inclineSlider;
 
    private void OnTriggerEnter(Collider other)
    {
         ScoreScript.AddMarginScore(dataScript.hellingsGetal, inclineSlider.value);
         
-
    }
 }
