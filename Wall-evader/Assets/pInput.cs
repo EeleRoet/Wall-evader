@@ -120,13 +120,7 @@ public class pInput : MonoBehaviour
 
     }
 
-    public void buttonStop()
-    {
 
-        
-
-
-    }
 
     public void Reset()
     {
