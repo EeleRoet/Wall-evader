@@ -33,7 +33,8 @@ public class MarginAnimation : MonoBehaviour
         SetTextColor(margin);
 
         LeanTween.scale(thisObject, Vector3.zero, 0);
-        LeanTween.scale(thisObject, new Vector3(1, 1, 1), 1).setOnComplete(FlipAlpha);
+        LeanTween.scale(thisObject, new Vector3(1, 1, 1), 1);
+        LeanTween.delayedCall(2, FlipAlpha);
         
     }
 
