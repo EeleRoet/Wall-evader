@@ -47,7 +47,7 @@ public class ScoreScript : MonoBehaviour
 
         timeLeft = time;
         Debug.Log(timeLeft);
-        StreakAnimation.StartAnimation();
+        
     }
 
     public static void AddMarginScore(float wallIncline, float inputIncline)

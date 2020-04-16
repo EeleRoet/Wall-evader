@@ -31,6 +31,7 @@ public class SpawnWalls : MonoBehaviour
         wall.transform.position = spawnPosition.position + (Vector3.up * (dataScript.startgetal * unitToForm));
         GetFirstChildren(wall.transform)[0].eulerAngles = new Vector3(0, 0, 0);
         GetFirstChildren(wall.transform)[0].Rotate(Vector3.forward * (Mathf.Atan(dataScript.hellingsGetal) * Mathf.Rad2Deg + 90));
+        wall.GetComponent<MoveWall>().ResetSpeed();
 
 
     }
