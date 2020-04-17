@@ -55,8 +55,10 @@ public class PauseMenu : MonoBehaviour
 
     public void LoadMenu()
     {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene("MainMenu");
+        PlayerPrefs.DeleteKey("Login");
+        SceneManager.LoadScene("database_testing");
+        //Time.timeScale = 1f;
+        //SceneManager.LoadScene("MainMenu");
     }
 
     public void Restart()

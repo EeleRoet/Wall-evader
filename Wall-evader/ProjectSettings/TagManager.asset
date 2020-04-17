@@ -8,6 +8,7 @@ TagManager:
   - X_waarde
   - Y_waarde2
   - Y_waarde3
+  - highscores
   layers:
   - Default
   - TransparentFX
