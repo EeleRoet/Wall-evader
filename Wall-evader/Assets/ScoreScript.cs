@@ -8,8 +8,11 @@ public class ScoreScript : MonoBehaviour
     
     static Text scoreText;
     static Text streakText;
+    [SerializeField] private ScoreCalcAnimations scoreAnimationScript;
 
+    private static ScoreCalcAnimations staticScoreAnimationScript;
     private static float score;             //current playerscore displayed top-right
+    public  static float scoreToAdd;
     private static float streakCount;
     private static float streakMultiplier;  //current streak-value: used to calculate score and displayed top-right
     private static float inclineMargin;     //difference in playeranswer and actual answer: used to calculate score
@@ -19,11 +22,12 @@ public class ScoreScript : MonoBehaviour
     // Start is called before the first frame update
     public void Start()
     {
+        staticScoreAnimationScript = scoreAnimationScript;
         timeLeft = 1;
         baseScore = 10;
         score = 0;
         streakCount = 0;
-        streakMultiplier = 0;
+        streakMultiplier = 1;
         scoreText = GetChildComponentByName<Text>("score");
         scoreText.text = "0";
         streakText = GetChildComponentByName<Text>("streak");
@@ -52,6 +56,7 @@ public class ScoreScript : MonoBehaviour
 
     public static void AddMarginScore(float wallIncline, float inputIncline)
     {
+        
         float tempScore;
         float tempStreakMultiplier;
 
@@ -65,17 +70,18 @@ public class ScoreScript : MonoBehaviour
 
         inclineMargin++;//adds 1 to avoid deviding by 0
         tempStreakMultiplier = streakMultiplier > 0 ? streakMultiplier : 1;
-        tempScore = timeLeft * (baseScore / inclineMargin) * tempStreakMultiplier;
-        score += tempScore;
+        tempScore = (float)System.Math.Round( timeLeft * (baseScore / inclineMargin) * tempStreakMultiplier, 1);
+        staticScoreAnimationScript.BaseScoreTriggerAnimations( (float)System.Math.Round( baseScore / inclineMargin, 1) , tempScore);
+        scoreToAdd = tempScore;
 
-        checkHigherScore();
     }
+
 
     private static void BumpStreak(float Margin)
     {
         if (Margin == 0)
         {
-           if(++streakCount > streakMultiplier)
+           if(++streakCount >= streakMultiplier)
            {
                 streakMultiplier++;
                 streakCount = 0;
@@ -84,9 +90,15 @@ public class ScoreScript : MonoBehaviour
         else
         {
             streakCount = 0;
-            streakMultiplier = 0;
+            streakMultiplier = 1;
         }
 
+    }
+
+    public static void AddScore()
+    {
+        score += scoreToAdd;
+        checkHigherScore();
     }
 
     private static void checkHigherScore()
