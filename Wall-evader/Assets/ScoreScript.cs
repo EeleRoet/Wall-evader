@@ -12,6 +12,7 @@ public class ScoreScript : MonoBehaviour
 
     private static ScoreCalcAnimations staticScoreAnimationScript;
     private static float score;             //current playerscore displayed top-right
+    public  static float scoreToAdd;
     private static float streakCount;
     private static float streakMultiplier;  //current streak-value: used to calculate score and displayed top-right
     private static float inclineMargin;     //difference in playeranswer and actual answer: used to calculate score
@@ -70,11 +71,11 @@ public class ScoreScript : MonoBehaviour
         inclineMargin++;//adds 1 to avoid deviding by 0
         tempStreakMultiplier = streakMultiplier > 0 ? streakMultiplier : 1;
         tempScore = timeLeft * (baseScore / inclineMargin) * tempStreakMultiplier;
-        staticScoreAnimationScript.BaseScoreTriggerAnimations(tempScore);
-        score += tempScore;
+        staticScoreAnimationScript.BaseScoreTriggerAnimations( baseScore / inclineMargin , tempScore);
+        scoreToAdd = tempScore;
 
-        checkHigherScore();
     }
+
 
     private static void BumpStreak(float Margin)
     {
@@ -92,6 +93,12 @@ public class ScoreScript : MonoBehaviour
             streakMultiplier = 0;
         }
 
+    }
+
+    public static void AddScore()
+    {
+        score += scoreToAdd;
+        checkHigherScore();
     }
 
     private static void checkHigherScore()

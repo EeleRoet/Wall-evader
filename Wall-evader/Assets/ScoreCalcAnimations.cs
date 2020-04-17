@@ -14,6 +14,9 @@ public class ScoreCalcAnimations : MonoBehaviour
     [SerializeField] private Transform baseScoreTextAnimationEnd;
 
     private Text finalScoreText;//needs to be same font as actualscore
+    [SerializeField] private Transform finalScoreTextAnimationStart;
+    [SerializeField] private Transform finalScoreTextAnimationEnd;
+    private float finalScore;
 
     private Text streakMultiplierText;//needs to be same font as timerMultiplierText
     [SerializeField] private Transform streakMultiplierTextAnimationStart;
@@ -23,6 +26,7 @@ public class ScoreCalcAnimations : MonoBehaviour
     private float timerTriggerAnimationLength;
     private float baseScoreTriggerAnimationLength;
     private float addScoreAnimationLength;
+    private float addFinalScoreAnimationLength;
 
     // Start is called before the first frame update
     void Start()
@@ -30,11 +34,13 @@ public class ScoreCalcAnimations : MonoBehaviour
         timerTriggerAnimationLength = 1f;
         baseScoreTriggerAnimationLength = 1f;
         addScoreAnimationLength = 0.5f;
+        addFinalScoreAnimationLength = 1f;
         timerMultiplierText = GetChildComponentByName<Text>("TimerMultiplierText");
         baseScoreText = GetChildComponentByName<Text>("BaseScoreText");
         streakMultiplierText = GetChildComponentByName<Text>("StreakMultiplierText");
         finalScoreText = GetChildComponentByName<Text>("FinalScoreText");
         ResetText();
+        ResetFinalScoreText();
         
     }
 
@@ -64,11 +70,12 @@ public class ScoreCalcAnimations : MonoBehaviour
     }
     
 
-    public void BaseScoreTriggerAnimations(float score)
+    public void BaseScoreTriggerAnimations(float score, float finalScore)
     {
         //base score text krijgt de goede waarde, en beweegt daarna naar de goede plek.
         //alle 3 de texts komen samen en gaan dan weg, de final score text krijgt de goede waarde en beweegt dan naar de goede plek.
         //de final score text gaat weg en de score wordt geupdate.
+        this.finalScore = finalScore;
         baseScoreText.gameObject.SetActive(true);
         baseScoreText.text = score.ToString();
         LeanTween.move(baseScoreText.gameObject, baseScoreTextAnimationEnd.position, baseScoreTriggerAnimationLength).setOnComplete(AddScoresAnimation);
@@ -77,8 +84,18 @@ public class ScoreCalcAnimations : MonoBehaviour
     private void AddScoresAnimation()
     {
         LeanTween.move(timerMultiplierText.gameObject, baseScoreTextAnimationEnd, addScoreAnimationLength);
-        LeanTween.move(streakMultiplierText.gameObject, baseScoreTextAnimationEnd, addScoreAnimationLength).setOnComplete(ResetText);
+        LeanTween.move(streakMultiplierText.gameObject, baseScoreTextAnimationEnd, addScoreAnimationLength).setOnComplete(AddFinalScoreAnimation);
+       
     }
+
+   private void AddFinalScoreAnimation()
+   {
+        finalScoreText.gameObject.SetActive(true);
+        finalScoreText.text = finalScore.ToString();
+        ResetText();
+        LeanTween.move(finalScoreText.gameObject, finalScoreTextAnimationEnd.position, addFinalScoreAnimationLength).setOnComplete(ScoreScript.AddScore);
+        LeanTween.delayedCall(addFinalScoreAnimationLength, ResetFinalScoreText);
+   }
 
     private void ResetText()
     {
@@ -103,6 +120,12 @@ public class ScoreCalcAnimations : MonoBehaviour
     {
         streakMultiplierText.transform.position = streakMultiplierTextAnimationStart.position;
         streakMultiplierText.gameObject.SetActive(false);
+    }
+
+    private void ResetFinalScoreText()
+    {
+        finalScoreText.transform.position = finalScoreTextAnimationStart.position;
+        finalScoreText.gameObject.SetActive(false);
     }
 
     //method from stackoverflow answer by: markroth8 at: 
