@@ -26,6 +26,7 @@ public class ScoreCalcAnimations : MonoBehaviour
     private float timerTriggerAnimationLength;
     private float baseScoreTriggerAnimationLength;
     private float addScoreAnimationLength;
+   // private float textFadeTime;
     private float addFinalScoreAnimationLength;
 
     // Start is called before the first frame update
@@ -33,7 +34,8 @@ public class ScoreCalcAnimations : MonoBehaviour
     {
         timerTriggerAnimationLength = 1f;
         baseScoreTriggerAnimationLength = 1f;
-        addScoreAnimationLength = 0.5f;
+        addScoreAnimationLength = 0.3f;
+       // textFadeTime = 0.5f;
         addFinalScoreAnimationLength = 1f;
         timerMultiplierText = GetChildComponentByName<Text>("TimerMultiplierText");
         baseScoreText = GetChildComponentByName<Text>("BaseScoreText");
@@ -56,12 +58,12 @@ public class ScoreCalcAnimations : MonoBehaviour
         //timer text en streak text krijgen goede waardes, en bewegen daarna naar de goede plek.
 
         timerMultiplierText.gameObject.SetActive(true);
-        timerMultiplierText.text = timeLeft.ToString();
+        timerMultiplierText.text = timeLeft.ToString() + " *";
         LeanTween.move(timerMultiplierText.gameObject, timerMultiplierTextAnimationEnd.position, 1).setEase(LeanTweenType.easeOutQuart);
         LeanTween.scale(timerMultiplierText.gameObject, new Vector3(1.5f, 1.5f, 1.5f), timerTriggerAnimationLength);
 
         streakMultiplierText.gameObject.SetActive(true);
-        streakMultiplierText.text = actualStreakText.text.Split(' ')[1];
+        streakMultiplierText.text = "* " + actualStreakText.text.Split(' ')[1];
         LeanTween.move(streakMultiplierText.gameObject, streakMultiplierTextAnimationEnd.position, 1).setEase(LeanTweenType.easeOutQuart);
         LeanTween.scale(streakMultiplierText.gameObject, new Vector3(1.5f, 1.5f, 1.5f), timerTriggerAnimationLength);
 
@@ -79,13 +81,20 @@ public class ScoreCalcAnimations : MonoBehaviour
         baseScoreText.gameObject.SetActive(true);
         baseScoreText.text = score.ToString();
         LeanTween.move(baseScoreText.gameObject, baseScoreTextAnimationEnd.position, baseScoreTriggerAnimationLength).setOnComplete(AddScoresAnimation);
+        LeanTween.scale(baseScoreText.gameObject, new Vector3(1.5f, 1.5f, 1.5f), baseScoreTriggerAnimationLength);
     }
 
     private void AddScoresAnimation()
     {
+        timerMultiplierText.text = timerMultiplierText.text.Split(' ')[0];
         LeanTween.move(timerMultiplierText.gameObject, baseScoreTextAnimationEnd, addScoreAnimationLength).setEase(LeanTweenType.easeOutQuart);
+        // LeanTween.alpha(timerMultiplierText.gameObject, 0f, 1f);
+        streakMultiplierText.text = streakMultiplierText.text.Split(' ')[1];
         LeanTween.move(streakMultiplierText.gameObject, baseScoreTextAnimationEnd, addScoreAnimationLength).setEase(LeanTweenType.easeOutQuart).setOnComplete(AddFinalScoreAnimation);
-       
+       // LeanTween.alpha(streakMultiplierText.gameObject, 1f, textFadeTime);
+       // LeanTween.alpha(baseScoreText.gameObject, 0f, textFadeTime);
+
+
     }
 
    private void AddFinalScoreAnimation()
@@ -94,6 +103,8 @@ public class ScoreCalcAnimations : MonoBehaviour
         finalScoreText.text = finalScore.ToString();
         ResetText();
         LeanTween.move(finalScoreText.gameObject, finalScoreTextAnimationEnd.position, addFinalScoreAnimationLength).setEase(LeanTweenType.easeInOutQuart).setOnComplete(ScoreScript.AddScore);
+        LeanTween.scale(finalScoreText.gameObject, new Vector3(0.5f, 0.5f, 0.5f), addFinalScoreAnimationLength);
+
         LeanTween.delayedCall(addFinalScoreAnimationLength, ResetFinalScoreText);
    }
 
@@ -107,24 +118,28 @@ public class ScoreCalcAnimations : MonoBehaviour
     private void ResetTimerMultiplierText()
     {
         timerMultiplierText.transform.position = timerMultiplierTextAnimationStart.position;
+        timerMultiplierText.transform.localScale = Vector3.one;
         timerMultiplierText.gameObject.SetActive(false);
     }
 
     private void ResetBaseScoreText()
     {
         baseScoreText.transform.position = baseScoreTextAnimationStart.position;
+        baseScoreText.transform.localScale = Vector3.one;
         baseScoreText.gameObject.SetActive(false);
     }
 
     private void ResetstreakMultiplierText()
     {
         streakMultiplierText.transform.position = streakMultiplierTextAnimationStart.position;
+        streakMultiplierText.transform.localScale = Vector3.one;
         streakMultiplierText.gameObject.SetActive(false);
     }
 
     private void ResetFinalScoreText()
     {
         finalScoreText.transform.position = finalScoreTextAnimationStart.position;
+        finalScoreText.transform.localScale = Vector3.one;
         finalScoreText.gameObject.SetActive(false);
     }
 

@@ -70,8 +70,8 @@ public class ScoreScript : MonoBehaviour
 
         inclineMargin++;//adds 1 to avoid deviding by 0
         tempStreakMultiplier = streakMultiplier > 0 ? streakMultiplier : 1;
-        tempScore = timeLeft * (baseScore / inclineMargin) * tempStreakMultiplier;
-        staticScoreAnimationScript.BaseScoreTriggerAnimations( baseScore / inclineMargin , tempScore);
+        tempScore = (float)System.Math.Round( timeLeft * (baseScore / inclineMargin) * tempStreakMultiplier, 1);
+        staticScoreAnimationScript.BaseScoreTriggerAnimations( (float)System.Math.Round( baseScore / inclineMargin, 1) , tempScore);
         scoreToAdd = tempScore;
 
     }
