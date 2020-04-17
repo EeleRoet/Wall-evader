@@ -27,7 +27,7 @@ public class ScoreScript : MonoBehaviour
         baseScore = 10;
         score = 0;
         streakCount = 0;
-        streakMultiplier = 0;
+        streakMultiplier = 1;
         scoreText = GetChildComponentByName<Text>("score");
         scoreText.text = "0";
         streakText = GetChildComponentByName<Text>("streak");
@@ -81,7 +81,7 @@ public class ScoreScript : MonoBehaviour
     {
         if (Margin == 0)
         {
-           if(++streakCount > streakMultiplier)
+           if(++streakCount >= streakMultiplier)
            {
                 streakMultiplier++;
                 streakCount = 0;
@@ -90,7 +90,7 @@ public class ScoreScript : MonoBehaviour
         else
         {
             streakCount = 0;
-            streakMultiplier = 0;
+            streakMultiplier = 1;
         }
 
     }

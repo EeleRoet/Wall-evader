@@ -88,10 +88,10 @@ public class ScoreCalcAnimations : MonoBehaviour
     {
         timerMultiplierText.text = timerMultiplierText.text.Split(' ')[0];
         LeanTween.move(timerMultiplierText.gameObject, baseScoreTextAnimationEnd, addScoreAnimationLength).setEase(LeanTweenType.easeOutQuart);
-        // LeanTween.alpha(timerMultiplierText.gameObject, 0f, 1f);
+       
         streakMultiplierText.text = streakMultiplierText.text.Split(' ')[1];
         LeanTween.move(streakMultiplierText.gameObject, baseScoreTextAnimationEnd, addScoreAnimationLength).setEase(LeanTweenType.easeOutQuart).setOnComplete(AddFinalScoreAnimation);
-       // LeanTween.alpha(streakMultiplierText.gameObject, 1f, textFadeTime);
+       //LeanTween.alpha(streakMultiplierText.gameObject, 1f, textFadeTime);
        // LeanTween.alpha(baseScoreText.gameObject, 0f, textFadeTime);
 
 
