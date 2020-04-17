@@ -75,20 +75,20 @@ public class pInput : MonoBehaviour
             
         }
 
-
-        if (active == true)
-
+        if(active == true)
         {
 
             button.onClick.AddListener(lockSlider);
 
         }
+
         else
         {
 
 
 
         }
+
  
     }
 
@@ -106,6 +106,7 @@ public class pInput : MonoBehaviour
 
 
         button.interactable = false;
+        Debug.Log("werkaub");
 
     }
 
@@ -132,6 +133,7 @@ public class pInput : MonoBehaviour
     {
 
         this.target.eulerAngles = currentRotation;
+        
 
     }
 }
