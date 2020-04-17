@@ -57,12 +57,12 @@ public class ScoreCalcAnimations : MonoBehaviour
 
         timerMultiplierText.gameObject.SetActive(true);
         timerMultiplierText.text = timeLeft.ToString();
-        LeanTween.move(timerMultiplierText.gameObject, timerMultiplierTextAnimationEnd.position, 1);
+        LeanTween.move(timerMultiplierText.gameObject, timerMultiplierTextAnimationEnd.position, 1).setEase(LeanTweenType.easeOutQuart);
         LeanTween.scale(timerMultiplierText.gameObject, new Vector3(1.5f, 1.5f, 1.5f), timerTriggerAnimationLength);
 
         streakMultiplierText.gameObject.SetActive(true);
         streakMultiplierText.text = actualStreakText.text.Split(' ')[1];
-        LeanTween.move(streakMultiplierText.gameObject, streakMultiplierTextAnimationEnd.position, 1);
+        LeanTween.move(streakMultiplierText.gameObject, streakMultiplierTextAnimationEnd.position, 1).setEase(LeanTweenType.easeOutQuart);
         LeanTween.scale(streakMultiplierText.gameObject, new Vector3(1.5f, 1.5f, 1.5f), timerTriggerAnimationLength);
 
         
@@ -83,8 +83,8 @@ public class ScoreCalcAnimations : MonoBehaviour
 
     private void AddScoresAnimation()
     {
-        LeanTween.move(timerMultiplierText.gameObject, baseScoreTextAnimationEnd, addScoreAnimationLength);
-        LeanTween.move(streakMultiplierText.gameObject, baseScoreTextAnimationEnd, addScoreAnimationLength).setOnComplete(AddFinalScoreAnimation);
+        LeanTween.move(timerMultiplierText.gameObject, baseScoreTextAnimationEnd, addScoreAnimationLength).setEase(LeanTweenType.easeOutQuart);
+        LeanTween.move(streakMultiplierText.gameObject, baseScoreTextAnimationEnd, addScoreAnimationLength).setEase(LeanTweenType.easeOutQuart).setOnComplete(AddFinalScoreAnimation);
        
     }
 
@@ -93,7 +93,7 @@ public class ScoreCalcAnimations : MonoBehaviour
         finalScoreText.gameObject.SetActive(true);
         finalScoreText.text = finalScore.ToString();
         ResetText();
-        LeanTween.move(finalScoreText.gameObject, finalScoreTextAnimationEnd.position, addFinalScoreAnimationLength).setOnComplete(ScoreScript.AddScore);
+        LeanTween.move(finalScoreText.gameObject, finalScoreTextAnimationEnd.position, addFinalScoreAnimationLength).setEase(LeanTweenType.easeInOutQuart).setOnComplete(ScoreScript.AddScore);
         LeanTween.delayedCall(addFinalScoreAnimationLength, ResetFinalScoreText);
    }
 
