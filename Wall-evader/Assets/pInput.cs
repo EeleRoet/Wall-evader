@@ -65,9 +65,15 @@ public class pInput : MonoBehaviour
 
         if(timer <= 0 && active == true)
         {
-
+            Debug.Log("test");
             active = false;
             lockSlider();
+
+        }
+        else
+        {
+
+            active = true;
 
         }
 
@@ -89,7 +95,14 @@ public class pInput : MonoBehaviour
         else
         {
 
+            active = true;
 
+        }
+
+        if(timer <= 0)
+        {
+
+            timer = 0;
 
         }
 
@@ -107,7 +120,7 @@ public class pInput : MonoBehaviour
         ScoreScript.AddTimerScore((int)timer);
         moveWallScript.SetSpeed();
         scoreAnimationScript.TimerTriggerAnimations((int)timer);
-      
+        
 
 
         button.interactable = false;
