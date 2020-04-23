@@ -91,9 +91,7 @@ public class ScoreCalcAnimations : MonoBehaviour
        
         streakMultiplierText.text = streakMultiplierText.text.Split(' ')[1];
         LeanTween.move(streakMultiplierText.gameObject, baseScoreTextAnimationEnd, addScoreAnimationLength).setEase(LeanTweenType.easeOutQuart).setOnComplete(AddFinalScoreAnimation);
-       //LeanTween.alpha(streakMultiplierText.gameObject, 1f, textFadeTime);
-       // LeanTween.alpha(baseScoreText.gameObject, 0f, textFadeTime);
-
+     
 
     }
 
