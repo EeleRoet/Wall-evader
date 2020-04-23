@@ -48,7 +48,7 @@ public class CountdownTimer : MonoBehaviour
         if(pIn.resetTimer == true)
         {
 
-
+            
             countdownReset();
 
         }
@@ -80,7 +80,7 @@ public class CountdownTimer : MonoBehaviour
     void timeUpdate()
     {
 
-        currentTime -= 1 * Time.deltaTime;
+        currentTime = pIn.timer;
         CountdownText.text = currentTime.ToString("0");
 
 
@@ -125,6 +125,6 @@ public class CountdownTimer : MonoBehaviour
 
     }
 
-
+    
 
 }
