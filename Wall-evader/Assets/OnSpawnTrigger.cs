@@ -8,6 +8,7 @@ public class OnSpawnTrigger : MonoBehaviour
     [SerializeField] private GenerateData dataScript;
     [SerializeField] private DynamicCamera dynamicCamera;
     public pInput pIn;
+    
 
     private void OnTriggerEnter(Collider other)
     {
@@ -15,5 +16,7 @@ public class OnSpawnTrigger : MonoBehaviour
         
         pIn.resetTimer = true;
         dynamicCamera.zoomIn = false;
+        
+
     }
 }
