@@ -48,7 +48,7 @@ public class CountdownTimer : MonoBehaviour
         if(pIn.resetTimer == true)
         {
 
-            
+            CountdownText.enabled = true;
             countdownReset();
 
         }

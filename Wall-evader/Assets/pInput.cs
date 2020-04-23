@@ -7,6 +7,7 @@ public class pInput : MonoBehaviour
 {
     [SerializeField] private MoveWall moveWallScript;
     [SerializeField] private ScoreCalcAnimations scoreAnimationScript;
+    public CountdownTimer cTimer;
     public viewObstructionScript viewScript;
     public Rigidbody rbody;
     public Transform target;
@@ -65,7 +66,7 @@ public class pInput : MonoBehaviour
 
         if(timer <= 0 && active == true)
         {
-            Debug.Log("test");
+
             active = false;
             lockSlider();
 
@@ -120,8 +121,8 @@ public class pInput : MonoBehaviour
         ScoreScript.AddTimerScore((int)timer);
         moveWallScript.SetSpeed();
         scoreAnimationScript.TimerTriggerAnimations((int)timer);
-        
 
+        cTimer.enabled = false;
 
         button.interactable = false;
         Debug.Log("werkaub");
