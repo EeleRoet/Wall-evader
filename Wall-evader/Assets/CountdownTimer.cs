@@ -30,10 +30,10 @@ public class CountdownTimer : MonoBehaviour
         CountdownText.text = currentTime.ToString("0");
 
 
-        if(currentTime == 0)
+        if(currentTime <= 0)
         {
 
-            CountdownText.text = "Time's UP";
+            currentTime = 0;
 
         }
     }
