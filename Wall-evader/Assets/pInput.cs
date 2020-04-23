@@ -66,6 +66,7 @@ public class pInput : MonoBehaviour
         if(timer <= 0 && active == true)
         {
 
+            active = false;
             lockSlider();
 
         }
@@ -80,6 +81,7 @@ public class pInput : MonoBehaviour
         if(active == true)
         {
 
+            active = false;
             button.onClick.AddListener(lockSlider);
 
         }
@@ -100,7 +102,7 @@ public class pInput : MonoBehaviour
 
         slide.interactable = false;
         slide_verhoging.interactable = false;
-        active = false;
+        
         viewScript.deactivateObstruction();
         ScoreScript.AddTimerScore((int)timer);
         moveWallScript.SetSpeed();

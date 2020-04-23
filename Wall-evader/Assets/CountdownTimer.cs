@@ -6,24 +6,35 @@ using UnityEngine.UI;
 
 public class CountdownTimer : MonoBehaviour
 {
-    pInput pIn;
-    Text Countdown;
+   
+    [SerializeField] Text CountdownText;
+    float currentTime = 0f;
+    float startingTime = 9f;
+
+
     
 
     // Start is called before the first frame update
     void Start()
     {
-        
-        Countdown = GetComponent<Text>();
-        pIn = GetComponent<pInput>();
 
+        currentTime = startingTime;
+        
     }
 
     // Update is called once per frame
-    public void textUpdate(float value)
+    void Update()
     {
 
-        Countdown.text = value.ToString();
+        currentTime -= 1 * Time.deltaTime;
+        CountdownText.text = currentTime.ToString("0");
 
+
+        if(currentTime == 0)
+        {
+
+            CountdownText.text = "Time's UP";
+
+        }
     }
 }
