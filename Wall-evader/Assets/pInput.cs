@@ -90,7 +90,7 @@ public class pInput : MonoBehaviour
         if(active == true)
         {
 
-            active = false;
+            
             button.onClick.AddListener(lockSlider);
 
         }
@@ -104,7 +104,7 @@ public class pInput : MonoBehaviour
 
         if(timer <= 0)
         {
-
+            Debug.Log("help");
             timer = 0;
 
         }
@@ -125,12 +125,12 @@ public class pInput : MonoBehaviour
         scoreAnimationScript.TimerTriggerAnimations((int)timer);
 
         cTimer.enabled = false;
-        cTimer.currentSize = 0;
+       
 
         button.interactable = false;
         Debug.Log("werkaub");
 
-        timer = cTimer.currentTime;
+        
 
     }
 
