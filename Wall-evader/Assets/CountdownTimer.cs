@@ -45,17 +45,10 @@ public class CountdownTimer : MonoBehaviour
         sizeUpdate();
         colorUpdate();
 
-        if(currentTime >= 0)
-        {
-
-            currentSize = 0;
-
-        }
-
         if(pIn.resetTimer == true)
         {
 
-            
+            CountdownText.enabled = true;
             countdownReset();
 
         }
