@@ -123,9 +123,12 @@ public class pInput : MonoBehaviour
         scoreAnimationScript.TimerTriggerAnimations((int)timer);
 
         cTimer.enabled = false;
+        cTimer.currentSize = 0;
 
         button.interactable = false;
         Debug.Log("werkaub");
+
+        timer = cTimer.currentTime;
 
     }
 

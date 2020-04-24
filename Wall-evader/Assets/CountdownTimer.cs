@@ -11,16 +11,16 @@ public class CountdownTimer : MonoBehaviour
     public pInput pIn;
 
     //De tijd van de Counter
-    float currentTime = 0f;
-    float startingTime = 9f;
+    public float currentTime = 0f;
+    public float startingTime = 9f;
     //De groote ervan
-    float startingSize = 154;
-    float currentSize;
-    float targetSize = 254;
+    public float startingSize = 154;
+    public float currentSize;
+    public float targetSize = 254;
     //De kleur van de Counter
-    Color startingColor = new Color(1,1,1,1);
-    Color currentColor = new Color();
-    Color targetColor = new Color(1,0,0,1);
+    public Color startingColor = new Color(1,1,1,1);
+    public Color currentColor = new Color();
+    public Color targetColor = new Color(1,0,0,1);
 
 
 
@@ -45,10 +45,17 @@ public class CountdownTimer : MonoBehaviour
         sizeUpdate();
         colorUpdate();
 
+        if(currentTime<= 0)
+        {
+
+            currentSize = 0;
+
+        }
+
         if(pIn.resetTimer == true)
         {
 
-            CountdownText.enabled = true;
+            
             countdownReset();
 
         }

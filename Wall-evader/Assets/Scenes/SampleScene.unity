@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 11989593}
   - component: {fileID: 11989595}
   - component: {fileID: 11989594}
+  - component: {fileID: 11989596}
   m_Layer: 5
   m_Name: CountdownText
   m_TagString: Untagged
@@ -198,6 +199,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 11989592}
   m_CullTransparentMesh: 0
+--- !u!114 &11989596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11989592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0.990566, g: 0.990566, b: 0.990566, a: 0.5}
+  m_EffectDistance: {x: 5, y: -5}
+  m_UseGraphicAlpha: 1
 --- !u!1 &22812382
 GameObject:
   m_ObjectHideFlags: 0
@@ -793,6 +809,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CountdownText: {fileID: 11989594}
   pIn: {fileID: 688928306}
+  currentTime: 0
+  startingTime: 9
+  startingSize: 154
+  currentSize: 0
+  targetSize: 254
+  startingColor: {r: 1, g: 1, b: 1, a: 1}
+  currentColor: {r: 0, g: 0, b: 0, a: 0}
+  targetColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &71310273
 GameObject:
   m_ObjectHideFlags: 0
