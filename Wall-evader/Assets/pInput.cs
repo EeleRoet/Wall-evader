@@ -63,12 +63,14 @@ public class pInput : MonoBehaviour
 
 
         timer -= Time.deltaTime;
+        
 
         if(timer <= 0 && active == true)
         {
 
             active = false;
             lockSlider();
+           
 
         }
         else
