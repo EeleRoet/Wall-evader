@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 
 public class dbStuff : MonoBehaviour
 {
@@ -27,11 +29,29 @@ public class dbStuff : MonoBehaviour
         WWWForm form = new WWWForm();
         form.AddField("name", nameField.text);
 
-        WWW www = new WWW("http://localhost/sqlconnect/register.php", form);
-        yield return www;
-        Debug.Log("user created successfully.");
-        LogIn();
-        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+        using (UnityWebRequest www = UnityWebRequest.Post("https://oege.ie.hva.nl/~ottensj1/register.php", form))
+        {
+            yield return www.SendWebRequest();
+
+            if (www.isNetworkError || www.isHttpError)
+            {
+                Debug.Log(www.error);
+            }
+            else
+            {
+
+                string responseText = www.downloadHandler.text;
+
+                if (responseText.StartsWith("Account"))
+                {
+                    SceneManager.LoadScene("MainMenu");
+                }
+                else
+                {
+                    print(www.downloadHandler.text);
+                }
+            }
+        }
     }
 
     public void VerifyInputs()

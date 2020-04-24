@@ -10,10 +10,12 @@ using System.Collections;
 
 public class getAccounts : MonoBehaviour
 {
+    public string[] highscores;
+
     void Start()
     {
         // A correct website page.
-        StartCoroutine(GetRequest("http://localhost/sqlconnect/getHighscores.php"));
+        StartCoroutine(GetRequest("https://oege.ie.hva.nl/~ottensj1/getHighscores.php"));
     }
 
     IEnumerator GetRequest(string uri)
@@ -32,11 +34,11 @@ public class getAccounts : MonoBehaviour
             }
             else
             {
-                string[] highscores = webRequest.downloadHandler.text.Split(char.Parse(" "));
+                highscores = webRequest.downloadHandler.text.Split(char.Parse(" "));
                 
                 foreach (string highscore in highscores)
                 {
-                    Debug.Log(highscore);
+                    //Debug.Log(highscore);
                 }
             }
         }

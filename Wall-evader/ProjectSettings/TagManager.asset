@@ -9,6 +9,8 @@ TagManager:
   - Y_waarde2
   - Y_waarde3
   - highscores
+  - rank
+  - Canvas
   layers:
   - Default
   - TransparentFX
