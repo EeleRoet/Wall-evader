@@ -11,6 +11,9 @@ TagManager:
   - highscores
   - rank
   - Canvas
+  - 0
+  - 1
+  - 2
   layers:
   - Default
   - TransparentFX

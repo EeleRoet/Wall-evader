@@ -30,7 +30,6 @@ public class TutorialSequenceScript : MonoBehaviour
             foreach(Transform transform in GetComponentInChildren<Transform>(true))
             {
                 sequenceMembers.Add(transform);
-                Debug.Log("jeff");
             }
             currentMember = 0;
             BumpCurrentMember();
@@ -41,11 +40,7 @@ public class TutorialSequenceScript : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
 
     public void BumpCurrentMember()
     {
@@ -62,47 +57,57 @@ public class TutorialSequenceScript : MonoBehaviour
 
 
 
-    public void ToggleTimer()
+    public void SetTimer(bool newActive)
     {
-        timer.SetActive(timer.active ? false : true);
+        timer.SetActive(newActive);
     }
 
-    public void ToggleTabel()
+    public void SetTabel(bool newActive)
     {
-        tabel.SetActive(tabel.active ? false : true);
+        tabel.SetActive(newActive);
     }
 
-    public void ToggleLockKnop()
+    public void SetLockKnop(bool newActive)
     {
-        lockKnop.SetActive(lockKnop.active ? false : true);
+        lockKnop.SetActive(newActive);
     }
 
-    public void ToggleScore()
+    public void SetScore(bool newActive)
     {
-        score.SetActive(score.active ? false : true);
+        score.SetActive(newActive);
     }
 
-    public void ToggleWall()
+    public void SetWall(bool newActive)
     {
-        wall.SetActive(wall.active ? false : true);
+        wall.SetActive(newActive);
     }
 
-    public void ToggleSliders()
+    public void SetSliders(bool newActive)
     {
-        inclineSlider.SetActive(inclineSlider.active ? false : true);
-        startSlider.SetActive(startSlider.active ? false : true);
+        inclineSlider.SetActive(newActive);
+        startSlider.SetActive(newActive);
     }
 
-    public void TogglePauseButton()
+    public void SetPauseButton(bool newActive)
     {
-        pauseButton.SetActive(pauseButton.active ? false : true);
+        pauseButton.SetActive(newActive);
        
     }
 
-    public void ToggleFormule()
+    public void SetFormule(bool newActive)
     {
-        formule.SetActive(formule.active ? false : true);
+        formule.SetActive(newActive);
+    }
 
+    public ArrayList FillMemberElements(GameObject gameobjectToCheck)
+    {
+        ArrayList tempList = new ArrayList();
+       
+        foreach (Transform transform in gameobjectToCheck.GetComponentInChildren<Transform>(true))
+        {
+           tempList.Add(transform);
+        }
+        return tempList;
     }
 
 
