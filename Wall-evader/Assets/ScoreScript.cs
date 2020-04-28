@@ -5,13 +5,12 @@ using UnityEngine.UI;
 
 public class ScoreScript : MonoBehaviour
 {
-    
     static Text scoreText;
     static Text streakText;
     [SerializeField] private ScoreCalcAnimations scoreAnimationScript;
 
     private static ScoreCalcAnimations staticScoreAnimationScript;
-    private static float score;             //current playerscore displayed top-right
+    public static float score;             //current playerscore displayed top-right
     public  static float scoreToAdd;
     private static float streakCount;
     private static float streakMultiplier;  //current streak-value: used to calculate score and displayed top-right

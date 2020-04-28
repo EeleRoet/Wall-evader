@@ -15,8 +15,6 @@ public class dbStuff : MonoBehaviour
 
     public void Start()
     {
-        login = "Player has logged in before";
-
     }
 
     public void CallRegister()
@@ -44,6 +42,7 @@ public class dbStuff : MonoBehaviour
 
                 if (responseText.StartsWith("Account"))
                 {
+                    LogIn();
                     SceneManager.LoadScene("MainMenu");
                 }
                 else
@@ -61,6 +60,7 @@ public class dbStuff : MonoBehaviour
 
     public void LogIn()
     {
+        login = nameField.text;
         PlayerPrefs.SetString("Login", login);
     }
 }

@@ -8,6 +8,7 @@ public class PlayerCollision : MonoBehaviour
     {
         Debug.Log(other.gameObject.name);
         FindObjectOfType<PauseMenu>().GameOver();
+        //FindObjectOfType<updateScore>().CallUpdateHighscore();
     }
 
 }

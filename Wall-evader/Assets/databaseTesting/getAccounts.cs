@@ -2,6 +2,8 @@
 using UnityEngine.UI;
 using UnityEngine.Networking;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 
 // UnityWebRequest.Get example
 
@@ -10,7 +12,9 @@ using System.Collections;
 
 public class getAccounts : MonoBehaviour
 {
-    public string[] highscores;
+    public List<string> allScores = new List<string>();
+
+    public List<int> result = new List<int>();
 
     void Start()
     {
@@ -34,12 +38,7 @@ public class getAccounts : MonoBehaviour
             }
             else
             {
-                highscores = webRequest.downloadHandler.text.Split(char.Parse(" "));
-                
-                foreach (string highscore in highscores)
-                {
-                    //Debug.Log(highscore);
-                }
+                allScores = webRequest.downloadHandler.text.Split(char.Parse(" ")).ToList();
             }
         }
     }
