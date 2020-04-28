@@ -103,7 +103,7 @@ public class TutorialSequenceScript : MonoBehaviour
     {
         ArrayList tempList = new ArrayList();
        
-        foreach (Transform transform in gameobjectToCheck.GetComponentInChildren<Transform>(true))
+        foreach (RectTransform transform in gameobjectToCheck.GetComponentInChildren<RectTransform>(true))
         {
            tempList.Add(transform);
         }
