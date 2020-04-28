@@ -4,13 +4,10 @@ using UnityEngine;
 
 public class PlayerCollision : MonoBehaviour
 {
-
-    public Explosion explosion;
     void OnTriggerEnter(Collider other)
     {
         Debug.Log(other.gameObject.name);
         FindObjectOfType<PauseMenu>().GameOver();
-        //explosion.Explode();
     }
 
 }
