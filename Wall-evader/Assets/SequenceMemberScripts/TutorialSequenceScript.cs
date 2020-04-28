@@ -13,10 +13,12 @@ public class TutorialSequenceScript : MonoBehaviour
     [SerializeField] private GameObject lockKnop;
     [SerializeField] private GameObject score;
     [SerializeField] private GameObject wall;
-    [SerializeField] private GameObject inclineSlider;
-    [SerializeField] private GameObject startSlider;
+    [SerializeField] public Slider inclineSlider;
+    [SerializeField] public Slider startSlider;
     [SerializeField] private GameObject pauseButton;
     [SerializeField] private GameObject formule;
+    [SerializeField] private GameObject scoreAnimation;
+    [SerializeField] private GameObject tutorialTrigger;
 
 
 
@@ -84,8 +86,8 @@ public class TutorialSequenceScript : MonoBehaviour
 
     public void SetSliders(bool newActive)
     {
-        inclineSlider.SetActive(newActive);
-        startSlider.SetActive(newActive);
+        inclineSlider.gameObject.SetActive(newActive);
+        startSlider.gameObject.SetActive(newActive);
     }
 
     public void SetPauseButton(bool newActive)
@@ -97,6 +99,11 @@ public class TutorialSequenceScript : MonoBehaviour
     public void SetFormule(bool newActive)
     {
         formule.SetActive(newActive);
+    }
+
+    public void setScoreAnimation(bool newActive)
+    {
+        scoreAnimation.SetActive(newActive);
     }
 
     public ArrayList FillMemberElements(GameObject gameobjectToCheck)

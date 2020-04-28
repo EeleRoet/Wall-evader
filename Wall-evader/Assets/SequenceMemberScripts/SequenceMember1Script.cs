@@ -54,7 +54,6 @@ public class SequenceMember1Script : MonoBehaviour
                     if (transform.gameObject.GetComponent<Text>().color.a < 1)
                     {
                         newColor = transform.gameObject.GetComponent<Text>().color;
-                        Debug.Log(newColor.a);
                         newColor.a += memberElementFadeRate;
                         transform.gameObject.GetComponent<Text>().color = newColor;
                     }
