@@ -6,7 +6,9 @@ using UnityEngine.UI;
 public class SequenceMember5Script : MonoBehaviour
 {
     [SerializeField] private TutorialSequenceScript parentScript;
+    [SerializeField] private GenerateData dataScript;
     [SerializeField] private Button nextButton;
+    [SerializeField] private pInput playerInputScript;
     private ArrayList memberElementsBeingFaded = new ArrayList();
     private Color newColor;
     private float memberElementFadeRate;
@@ -17,7 +19,7 @@ public class SequenceMember5Script : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Time.timeScale = 0;
+        Time.timeScale = 1;
         currentMemberElement = 0;
         memberElementFadeRate = 0.025f;
         parentScript.SetLockKnop(false);
@@ -28,6 +30,7 @@ public class SequenceMember5Script : MonoBehaviour
         parentScript.SetTimer(false);
         parentScript.SetWall(true);
         parentScript.SetFormule(true);
+        parentScript.setScoreAnimation(false);
         nextButton.gameObject.SetActive(false);
 
         memberElements = parentScript.FillMemberElements(gameObject);
@@ -45,7 +48,6 @@ public class SequenceMember5Script : MonoBehaviour
 
     void Update()
     {
-
         if (memberElementsBeingFaded.Count != 0)
         {
 
@@ -56,7 +58,6 @@ public class SequenceMember5Script : MonoBehaviour
                     if (transform.gameObject.GetComponent<Text>().color.a < 1)
                     {
                         newColor = transform.gameObject.GetComponent<Text>().color;
-                        Debug.Log(newColor.a);
                         newColor.a += memberElementFadeRate;
                         transform.gameObject.GetComponent<Text>().color = newColor;
                     }
@@ -83,10 +84,22 @@ public class SequenceMember5Script : MonoBehaviour
             }
 
         }
+
+        if(currentMemberElement == 1)
+        {
+           if( System.Math.Round( parentScript.inclineSlider.value / 10, 1) == System.Math.Round( dataScript.hellingsGetal, 1) && parentScript.startSlider.value == dataScript.startgetal)
+            {
+
+                // parentScript.BumpCurrentMember();
+                Time.timeScale = 1;
+                playerInputScript.lockSlider();
+            }
+        }
     }
 
     public void StartSequence5()
     {
+        Time.timeScale = 0;
         SetMemberElementsActive(currentMemberElement);
         nextButton.gameObject.SetActive(true);
     }
@@ -96,9 +109,14 @@ public class SequenceMember5Script : MonoBehaviour
     {
         if (memberElements != null)
         {
+            SetMemberElementsNonActive(currentMemberElement);
             if (++currentMemberElement < memberElementsTexts)
             {
                 SetMemberElementsActive(currentMemberElement);
+                if(currentMemberElement == 1)
+                {
+                    nextButton.gameObject.SetActive(false);
+                }
             }
             else
             {
@@ -120,6 +138,17 @@ public class SequenceMember5Script : MonoBehaviour
 
                 transform.gameObject.SetActive(true);
                 FadeMemberElement(transform);
+            }
+        }
+    }
+
+    private void SetMemberElementsNonActive(int memberElement)
+    {
+        foreach (RectTransform transform in memberElements)
+        {
+            if (transform.CompareTag(memberElement.ToString()))
+            {
+                transform.gameObject.SetActive(false);
             }
         }
     }
