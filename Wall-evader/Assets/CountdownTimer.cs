@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class CountdownTimer : MonoBehaviour
 {
-   
+
     [SerializeField] Text CountdownText;
     public pInput pIn;
 
@@ -18,20 +18,20 @@ public class CountdownTimer : MonoBehaviour
     public float currentSize;
     public float targetSize = 254;
     //De kleur van de Counter
-    public Color startingColor = new Color(1,1,1,1);
+    public Color startingColor = new Color(1, 1, 1, 1);
     public Color currentColor = new Color();
-    public Color targetColor = new Color(1,0,0,1);
+    public Color targetColor = new Color(1, 0, 0, 1);
 
 
 
 
-    
+
 
     // Start is called before the first frame update
     void Start()
     {
 
-        currentTime = startingTime;
+        currentTime = pIn.timer;
         currentSize = startingSize;
         currentColor = startingColor;
 
@@ -47,10 +47,11 @@ public class CountdownTimer : MonoBehaviour
 
 
 
-        if(pIn.resetTimer == true)
+
+        if (pIn.resetTimer == true)
         {
 
-            
+
             countdownReset();
 
         }
@@ -106,7 +107,7 @@ public class CountdownTimer : MonoBehaviour
         currentColor.b += (targetColor.b - startingColor.b) / 9 * Time.deltaTime;
         CountdownText.color = (Color)currentColor;
 
-        if(currentColor.Equals(targetColor) && pIn.resetTimer == false)
+        if (currentColor.Equals(targetColor) && pIn.resetTimer == false)
         {
 
             currentColor.Equals(targetColor);
@@ -118,7 +119,7 @@ public class CountdownTimer : MonoBehaviour
 
 
     }
-    void countdownReset()
+    public void countdownReset()
     {
 
         currentColor.Equals(startingColor);
@@ -127,6 +128,6 @@ public class CountdownTimer : MonoBehaviour
 
     }
 
-    
+
 
 }

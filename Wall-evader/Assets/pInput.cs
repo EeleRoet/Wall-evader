@@ -14,12 +14,13 @@ public class pInput : MonoBehaviour
     public Slider slide;
     public Slider slide_verhoging;
     public float timer;
-    public bool active = true;
+    public bool working = true;
     public bool resetTimer = false;
     public Button button;
-    
+    public Text CountdownText;
 
-   
+
+
 
     public float verhoging = 0;
     public Vector3 rotate;
@@ -45,109 +46,98 @@ public class pInput : MonoBehaviour
     void Update()
     {
 
-        rotate = Vector3.forward * (Mathf.Atan(slide.value/10) * Mathf.Rad2Deg + 90);
-        verhoging = slide_verhoging.value*0.8f;
+        rotate = Vector3.forward * (Mathf.Atan(slide.value / 10) * Mathf.Rad2Deg + 90);
+        verhoging = slide_verhoging.value * 0.8f;
 
         target.position = new Vector3(0f, 0.5f + verhoging, -4.25f);
 
         currentRotation = rotate;
-        
 
-        if(rotate.z >= target.rotation.z || rotate.z <= target.rotation.z )
+
+        if (rotate.z >= target.rotation.z || rotate.z <= target.rotation.z)
         {
 
-                Reset();
+            Reset();
 
         }
+
+
+
+
 
 
 
         timer -= Time.deltaTime;
-        
 
-        if(timer <= 0 && active == true)
+        if (timer <= 0)
         {
 
-            active = false;
             lockSlider();
-           
-
-        }
-        else
-        {
-
-            active = true;
 
         }
 
-        if(resetTimer == true)
+
+        if (resetTimer == true)
         {
-            
+
             timerReset();
-            
-        }
-
-        if(active == true)
-        {
-
-            
-            button.onClick.AddListener(lockSlider);
 
         }
 
-        else
-        {
 
-            active = true;
 
-        }
+        button.onClick.AddListener(lockSlider);
 
-        if(timer <= 0)
-        {
-            Debug.Log("help");
-            timer = 0;
 
-        }
 
- 
+
+
+
+
+
     }
 
 
     public void lockSlider()
     {
+        if (working == true)
+        {
+            slide.interactable = false;
+            slide_verhoging.interactable = false;
 
-        slide.interactable = false;
-        slide_verhoging.interactable = false;
-        
-        viewScript.deactivateObstruction();
-        ScoreScript.AddTimerScore((int)timer);
-        moveWallScript.SetSpeed();
-        scoreAnimationScript.TimerTriggerAnimations((int)timer);
+            viewScript.deactivateObstruction();
+            ScoreScript.AddTimerScore((int)timer);
+            moveWallScript.SetSpeed();
+            scoreAnimationScript.TimerTriggerAnimations((int)timer);
 
-        cTimer.enabled = false;
-       
+            cTimer.enabled = false;
+            CountdownText.enabled = false;
 
-        button.interactable = false;
-        Debug.Log("werkaub");
+            button.interactable = false;
+            Debug.Log(working);
 
-        
 
+        }
+
+        working = false;
     }
 
 
 
     public void timerReset()
     {
-
+        cTimer.enabled = true;
         timer = 9f;
         slide.interactable = true;
         slide_verhoging.interactable = true;
         resetTimer = false;
-
+        cTimer.countdownReset();
         viewScript.activateObstruction();
+        button.interactable = true;
+        CountdownText.enabled = true;
 
-        active = true;
-       
+        working = true;
+
 
     }
 
@@ -157,7 +147,8 @@ public class pInput : MonoBehaviour
     {
 
         this.target.eulerAngles = currentRotation;
-        
+
 
     }
 }
+
