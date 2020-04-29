@@ -90,9 +90,18 @@ public class SequenceMember5Script : MonoBehaviour
            if( System.Math.Round( parentScript.inclineSlider.value / 10, 1) == System.Math.Round( dataScript.hellingsGetal, 1) && parentScript.startSlider.value == dataScript.startgetal)
             {
 
-                // parentScript.BumpCurrentMember();
+                parentScript.BumpCurrentMember();
                 Time.timeScale = 1;
                 playerInputScript.lockSlider();
+                parentScript.SetLockKnop(true);
+                parentScript.SetPauseButton(true);
+                parentScript.SetScore(true);
+                parentScript.SetSliders(true);
+                parentScript.SetTabel(true);
+                parentScript.SetTimer(true);
+                parentScript.SetWall(true);
+                parentScript.SetFormule(true);
+                parentScript.setScoreAnimation(true);
             }
         }
     }
