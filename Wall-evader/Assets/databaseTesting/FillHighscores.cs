@@ -10,15 +10,13 @@ public class FillHighscores : MonoBehaviour
 
     List<Text> tabelText = new List<Text>();
 
+    private int playerRank;
+
     // Start is called before the first frame update
     void Start()
     {
-        //scores = GetComponentsInChildren<Text>().ToList();
-
+        print(PlayerPrefs.GetString("Login", "nothing found"));
         StartCoroutine(wait());
-
-        print(tabelText.Count);
-        print(accounts.highscores.Length);
     }
 
     // Update is called once per frame
@@ -27,13 +25,13 @@ public class FillHighscores : MonoBehaviour
 
         for (int i = 0; i < tabelText.Count; i++)
         {
-            tabelText[i].text = accounts.highscores[i];
+            tabelText[i].text = accounts.allScores[i];
         }
     }
 
     IEnumerator wait()
     {
-        yield return new WaitForSeconds(.001f);
+        yield return new WaitForSeconds(0.6f);
 
         foreach (Text text in GetComponentsInChildren<Text>(true))
         {
@@ -42,5 +40,12 @@ public class FillHighscores : MonoBehaviour
                 tabelText.Add(text);
             }
         }
+        ScrollToPlayer();
+    }
+
+    public void ScrollToPlayer()
+    {
+        playerRank = (accounts.allScores.IndexOf(PlayerPrefs.GetString("Login", "nothing found")) + 2) / 2;
+        this.transform.position = new Vector3(540, 100.1f * playerRank, 0);
     }
 }
