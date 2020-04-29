@@ -3,12 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SequenceMember5Script : MonoBehaviour
+public class SequenceMember6 : MonoBehaviour
 {
     [SerializeField] private TutorialSequenceScript parentScript;
-    [SerializeField] private GenerateData dataScript;
     [SerializeField] private Button nextButton;
-    [SerializeField] private pInput playerInputScript;
     private ArrayList memberElementsBeingFaded = new ArrayList();
     private Color newColor;
     private float memberElementFadeRate;
@@ -33,6 +31,7 @@ public class SequenceMember5Script : MonoBehaviour
         parentScript.SetScoreAnimation(false);
         nextButton.gameObject.SetActive(false);
 
+
         memberElements = parentScript.FillMemberElements(gameObject);
         memberElementsTexts = 0;
         foreach (Transform transform in memberElements)
@@ -43,7 +42,7 @@ public class SequenceMember5Script : MonoBehaviour
             }
         }
 
-       
+
     }
 
     void Update()
@@ -84,20 +83,9 @@ public class SequenceMember5Script : MonoBehaviour
             }
 
         }
-
-        if(currentMemberElement == 1)
-        {
-           if( System.Math.Round( parentScript.inclineSlider.value / 10, 1) == System.Math.Round( dataScript.hellingsGetal, 1) && parentScript.startSlider.value == dataScript.startgetal)
-            {
-
-                parentScript.BumpCurrentMember();
-                Time.timeScale = 1;
-                playerInputScript.lockSlider();
-            }
-        }
     }
 
-    public void StartSequence5()
+    public void StartSequence6()
     {
         Time.timeScale = 0;
         SetMemberElementsActive(currentMemberElement);
@@ -113,9 +101,9 @@ public class SequenceMember5Script : MonoBehaviour
             if (++currentMemberElement < memberElementsTexts)
             {
                 SetMemberElementsActive(currentMemberElement);
-                if(currentMemberElement == 1)
+                if (currentMemberElement == 1)
                 {
-                    nextButton.gameObject.SetActive(false);
+                    parentScript.SetScore(true);
                 }
             }
             else
@@ -135,7 +123,6 @@ public class SequenceMember5Script : MonoBehaviour
         {
             if (transform.CompareTag(memberElement.ToString()))
             {
-
                 transform.gameObject.SetActive(true);
                 FadeMemberElement(transform);
             }

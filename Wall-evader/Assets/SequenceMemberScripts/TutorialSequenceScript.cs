@@ -10,7 +10,7 @@ public class TutorialSequenceScript : MonoBehaviour
 
     [SerializeField] private GameObject timer;
     [SerializeField] private GameObject tabel;
-    [SerializeField] private GameObject lockKnop;
+    [SerializeField] public Button lockKnop;
     [SerializeField] private GameObject score;
     [SerializeField] private GameObject wall;
     [SerializeField] public Slider inclineSlider;
@@ -42,8 +42,6 @@ public class TutorialSequenceScript : MonoBehaviour
         }
     }
 
-   
-
     public void BumpCurrentMember()
     {
         Transform tempTransform;
@@ -52,12 +50,27 @@ public class TutorialSequenceScript : MonoBehaviour
             tempTransform = sequenceMembers[currentMember - 1] as Transform;
             tempTransform.gameObject.SetActive(false);
         }
-        currentMember++;
-        tempTransform = sequenceMembers[currentMember - 1] as Transform;
-        tempTransform.gameObject.SetActive(true);
+        if (++currentMember - 1 < sequenceMembers.Count)
+        {
+            tempTransform = sequenceMembers[currentMember - 1] as Transform;
+            tempTransform.gameObject.SetActive(true);
+        }
+        else
+        {
+            tempTransform = sequenceMembers[currentMember - 2] as Transform;
+            tempTransform.gameObject.SetActive(false);
+            EndTutorial();
+        }
     }
 
-
+    private void EndTutorial()
+    {
+        Time.timeScale = 1;
+        SetAllUI(true);
+        lockKnop.interactable = true;
+        ChangePlayerPref();
+        gameObject.SetActive(false);
+    }
 
     public void SetTimer(bool newActive)
     {
@@ -71,7 +84,7 @@ public class TutorialSequenceScript : MonoBehaviour
 
     public void SetLockKnop(bool newActive)
     {
-        lockKnop.SetActive(newActive);
+        lockKnop.gameObject.SetActive(newActive);
     }
 
     public void SetScore(bool newActive)
@@ -101,9 +114,27 @@ public class TutorialSequenceScript : MonoBehaviour
         formule.SetActive(newActive);
     }
 
-    public void setScoreAnimation(bool newActive)
+    public void SetScoreAnimation(bool newActive)
     {
         scoreAnimation.SetActive(newActive);
+    }
+
+    private void SetAllUI(bool newActive)
+    {
+        SetTimer(newActive);
+        SetTabel(newActive);
+        SetLockKnop(newActive);
+        SetScore(newActive);
+        SetWall(newActive);
+        SetSliders(newActive);
+        SetPauseButton(newActive);
+        SetFormule(newActive);
+        SetScoreAnimation(newActive);
+    }
+
+    private void ChangePlayerPref()
+    {
+        PlayerPrefs.SetInt("runTutorial", 0);
     }
 
     public ArrayList FillMemberElements(GameObject gameobjectToCheck)

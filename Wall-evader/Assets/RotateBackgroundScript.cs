@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RotateBackgroundScript : MonoBehaviour
 {
-    private Vector3 angleTotilt = new Vector3(0, 0, -10f);
+    private Vector3 angleTotilt = new Vector3(0, 0, -9.5f);
     private float tiltduration = 2f;
     private void Start()
     {

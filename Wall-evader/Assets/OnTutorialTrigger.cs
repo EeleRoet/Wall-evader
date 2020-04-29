@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class OnTutorialTrigger : MonoBehaviour
 {
-    [SerializeField] private SequenceMember5Script sequenceScript;
+    [SerializeField] private SequenceMember5Script sequenceScript5;
+    [SerializeField] private SequenceMember7Script sequenceScript7;
     private void OnTriggerEnter(Collider other)
     {
-        if (sequenceScript.gameObject.activeSelf)
+        if (sequenceScript5.gameObject.activeSelf)
         {
-            sequenceScript.StartSequence5();
+            sequenceScript5.StartSequence5();
+        }
+        else if(sequenceScript7.gameObject.activeSelf)
+        {
+            sequenceScript7.StartSequence7();
         }
     }
 }

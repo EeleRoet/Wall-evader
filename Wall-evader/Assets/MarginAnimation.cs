@@ -8,9 +8,12 @@ public class MarginAnimation : MonoBehaviour
     private static Text marginText;
     private static GameObject thisObject;
     private static int colorSegment;
+    [SerializeField] private SequenceMember6 sequenceScript;
+    private static SequenceMember6  staticSequenceScript;
 
     public void Start()
     {
+        staticSequenceScript = sequenceScript;
         colorSegment = 85;
         thisObject = gameObject;
         marginText = GetComponent<Text>();
@@ -34,7 +37,11 @@ public class MarginAnimation : MonoBehaviour
 
         LeanTween.scale(thisObject, Vector3.zero, 0);
         LeanTween.scale(thisObject, new Vector3(1, 1, 1), 1);
-        LeanTween.delayedCall(2, FlipAlpha);
+        if (staticSequenceScript.gameObject.activeSelf)
+        {
+            LeanTween.delayedCall(2, staticSequenceScript.StartSequence6);
+        }
+        LeanTween.delayedCall(2.5f, FlipAlpha);
         
     }
 
