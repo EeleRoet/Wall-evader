@@ -7,7 +7,7 @@ public class MoveWall : MonoBehaviour
     private Rigidbody wallBody;
     private float timeToScoreTrigger;
     private float distanceToScoreTrigger;
-    private float speed;
+    public float speed;
     [SerializeField] private float SerializeSpeed;
     [SerializeField] private Transform scoreTriggerTransform;
 
