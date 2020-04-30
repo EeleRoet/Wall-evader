@@ -9,7 +9,7 @@ public class PlayerCollision : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         Debug.Log(other.gameObject.name);
-        
+        FindObjectOfType<PauseMenu>().GameOver();
         //FindObjectOfType<updateScore>().CallUpdateHighscore();
         explosion.Explode();
     }

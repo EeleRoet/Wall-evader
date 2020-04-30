@@ -15,6 +15,8 @@ public class SpawnWalls : MonoBehaviour
     {
         
         SpawnWall();
+
+
     }
 
     // Update is called once per frame
