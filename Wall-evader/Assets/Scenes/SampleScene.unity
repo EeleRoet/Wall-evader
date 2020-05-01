@@ -9444,7 +9444,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &741440503
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11152,7 +11152,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Hervat
+  m_Text: Spel hervatten
 --- !u!222 &993063011
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17988,8 +17988,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 344}
-  m_SizeDelta: {x: 245.9, y: 54.5}
+  m_AnchoredPosition: {x: -0.000022888, y: 347}
+  m_SizeDelta: {x: 270.8, y: 54.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2113702664
 MonoBehaviour:
