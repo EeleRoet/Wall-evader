@@ -1750,6 +1750,7 @@ MonoBehaviour:
   dataScript: {fileID: 252347000}
   dynamicCamera: {fileID: 963194229}
   pIn: {fileID: 688928306}
+  explosion: {fileID: 0}
 --- !u!43 &104690229
 Mesh:
   m_ObjectHideFlags: 0
@@ -8650,6 +8651,7 @@ GameObject:
   - component: {fileID: 688928307}
   - component: {fileID: 688928306}
   - component: {fileID: 688928308}
+  - component: {fileID: 688928309}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -9003,6 +9005,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d16a94fa186e2e740ba68a0c93d5c496, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosion: {fileID: 688928309}
+--- !u!114 &688928309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 688928300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e565b8dd625cad241899d5391fd96f41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pIn: {fileID: 688928306}
+  slider: {fileID: 2083069473}
+  mWall: {fileID: 0}
+  explosionSize: 0.5
+  explosionRow: 2
+  ExplosionGameover: 0
+  timer: 3
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -16301,7 +16323,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1929800308
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17239,7 +17261,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2012489948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51980,6 +52002,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31d771f13b74a7b4490122741ae933c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 0
   SerializeSpeed: 2
   scoreTriggerTransform: {fileID: 209239160}
 --- !u!4 &6682497556667564092
