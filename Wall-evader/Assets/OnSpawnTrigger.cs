@@ -8,7 +8,7 @@ public class OnSpawnTrigger : MonoBehaviour
     [SerializeField] private GenerateData dataScript;
     [SerializeField] private DynamicCamera dynamicCamera;
     public pInput pIn;
-    public Explosion explosion;
+
     
 
     private void OnTriggerEnter(Collider other)

@@ -8970,10 +8970,12 @@ MonoBehaviour:
   slide: {fileID: 2013874750}
   slide_verhoging: {fileID: 2083069473}
   timer: 0
+  timerDeath: 0
   working: 1
   resetTimer: 0
   button: {fileID: 1914774395}
   CountdownText: {fileID: 11989594}
+  explosion: {fileID: 0}
   verhoging: 0
   rotate: {x: 0, y: 0, z: 0}
   currentRotation: {x: 0, y: 0, z: 0}
@@ -9006,6 +9008,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosion: {fileID: 688928309}
+  timer: 3
+  GameoverStart: 0
 --- !u!114 &688928309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9021,6 +9025,9 @@ MonoBehaviour:
   pIn: {fileID: 688928306}
   slider: {fileID: 2083069473}
   mWall: {fileID: 0}
+  canvas: {fileID: 62446050}
+  SCA: {fileID: 0}
+  scoreCalc: {fileID: 0}
   explosionSize: 0.5
   explosionRow: 2
   ExplosionGameover: 0
@@ -15307,6 +15314,7 @@ GameObject:
   - component: {fileID: 1761585098}
   - component: {fileID: 1761585097}
   - component: {fileID: 1761585096}
+  - component: {fileID: 1761585100}
   m_Layer: 0
   m_Name: conveyor
   m_TagString: Untagged
@@ -15391,6 +15399,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1761585100
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1761585095}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1796284044
 GameObject:
   m_ObjectHideFlags: 0
