@@ -14,11 +14,12 @@ public class pInput : MonoBehaviour
     public Slider slide;
     public Slider slide_verhoging;
     public float timer;
+    public float timerDeath;
     public bool working = true;
     public bool resetTimer = false;
     public Button button;
     public Text CountdownText;
-
+    public Explosion explosion;
 
 
 
@@ -30,6 +31,7 @@ public class pInput : MonoBehaviour
     void Start()
     {
         timer = 9;
+        timerDeath = 1;
         target = GetComponent<Transform>();
         rbody = GetComponent<Rigidbody>();
 
@@ -62,11 +64,6 @@ public class pInput : MonoBehaviour
         }
 
 
-
-
-
-
-
         timer -= Time.deltaTime;
 
         if (timer <= 0)
@@ -87,10 +84,6 @@ public class pInput : MonoBehaviour
 
 
         button.onClick.AddListener(lockSlider);
-
-
-
-
 
 
 
@@ -150,5 +143,7 @@ public class pInput : MonoBehaviour
 
 
     }
+
+    
 }
 

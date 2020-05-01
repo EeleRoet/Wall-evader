@@ -8,6 +8,10 @@ public class Explosion : MonoBehaviour
     public pInput pIn;
     public Slider slider;
     public MoveWall mWall;
+    public Canvas canvas;
+    public ScoreCalcAnimations SCA;
+    public Text scoreCalc;
+
 
     public float explosionSize = 0.5f;
     public int explosionRow = 2;
@@ -21,8 +25,10 @@ public class Explosion : MonoBehaviour
     {
 
 
+        canvas.enabled = false;
 
-        gameObject.SetActive(false);
+        GetComponent<MeshRenderer>().enabled = false;
+        GetComponent<MeshCollider>().enabled = false;
 
 
 
@@ -61,9 +67,11 @@ public class Explosion : MonoBehaviour
         //maakt een rigidbody aan
         explosionCube.AddComponent<Rigidbody>();
         explosionCube.GetComponent<Rigidbody>().mass = explosionSize;
-        
+        explosionCube.GetComponent<Rigidbody>().angularVelocity.z.Equals(Random.Range(-10f,10f));
 
-        ExplosionGameover = true;
+        explosionCube.AddComponent<BoxCollider>();
+        explosionCube.GetComponent<BoxCollider>();
+
 
         if(explosionCube.transform.position.y <= 0.5)
         {
@@ -73,21 +81,6 @@ public class Explosion : MonoBehaviour
         }
 
 
-             void Update()
-         {
-
-
-             timer -= Time.deltaTime;
-             explosionCube.GetComponent<Rigidbody>().velocity = Vector3.back * mWall.speed;
-
-            if(timer <= 0)
-            {
-
-                FindObjectOfType<PauseMenu>().GameOver();
-
-            }
-
-         }
 
     }
 
