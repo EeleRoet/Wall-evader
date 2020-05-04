@@ -16,7 +16,7 @@ public class GenerateData : MonoBehaviour
        
         randomY = Random.Range(0, 5);
         startgetal = randomY;
-        hellingsGetal = (float)System.Math.Round(Mathf.Tan(Random.RandomRange(0, 80) / 180f * Mathf.PI), 1);
+        hellingsGetal = (float)System.Math.Round(Mathf.Tan(Random.RandomRange(0, 74) / 180f * Mathf.PI), 1);
 
         if (Random.Range(0.0f, 1.0f) > 0.5)
         {

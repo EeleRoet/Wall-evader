@@ -773,6 +773,7 @@ GameObject:
   - component: {fileID: 58941416}
   - component: {fileID: 58941418}
   - component: {fileID: 58941417}
+  - component: {fileID: 58941419}
   m_Layer: 5
   m_Name: MemberText1
   m_TagString: 0
@@ -796,7 +797,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -394, y: 478}
+  m_AnchoredPosition: {x: -420, y: 457}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &58941417
@@ -818,7 +819,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 6f55ae457b9568c4f88368aabac6a20e, type: 3}
     m_FontSize: 80
     m_FontStyle: 0
     m_BestFit: 0
@@ -830,7 +831,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "2: het hellingsgetal, \n    dit is het aantal stappen\n    dat de lijn
+  m_Text: "2: Het hellingsgetal, \n    dit is het aantal stappen\n    dat de lijn
     omhoog of \n    omlaag gaat als de lijn\n    \xE9\xE9n stap op de X-as \n   
     neemt."
 --- !u!222 &58941418
@@ -841,6 +842,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 58941415}
   m_CullTransparentMesh: 0
+--- !u!114 &58941419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 58941415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &62446046
 GameObject:
   m_ObjectHideFlags: 0
@@ -1034,7 +1050,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: volgende
+  m_Text: Volgende
 --- !u!222 &69125920
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1131,6 +1147,7 @@ GameObject:
   - component: {fileID: 73134293}
   - component: {fileID: 73134295}
   - component: {fileID: 73134294}
+  - component: {fileID: 73134296}
   m_Layer: 5
   m_Name: MemberText1
   m_TagString: 0
@@ -1176,8 +1193,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 75
+    m_Font: {fileID: 12800000, guid: 6f55ae457b9568c4f88368aabac6a20e, type: 3}
+    m_FontSize: 68
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -1188,7 +1205,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "in deze tabel zie je X- en \nY-waarden, met deze waardes\nkan je het hellingsgetal
+  m_Text: "In deze tabel zie je X- en \nY-waarden. Met deze waardes\nkan je het hellingsgetal
     en het\nstartgetal vinden."
 --- !u!222 &73134295
 CanvasRenderer:
@@ -1198,6 +1215,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 73134292}
   m_CullTransparentMesh: 0
+--- !u!114 &73134296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 73134292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &74571737
 GameObject:
   m_ObjectHideFlags: 0
@@ -1756,7 +1788,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh37638
+  m_Name: pb_Mesh16828
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1981,7 +2013,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: volgende
+  m_Text: Volgende
 --- !u!222 &115887381
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2207,6 +2239,7 @@ GameObject:
   - component: {fileID: 157206120}
   - component: {fileID: 157206122}
   - component: {fileID: 157206121}
+  - component: {fileID: 157206123}
   m_Layer: 5
   m_Name: MemberText2
   m_TagString: 1
@@ -2230,7 +2263,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -416, y: 65}
+  m_AnchoredPosition: {x: -416, y: 20}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &157206121
@@ -2252,8 +2285,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 75
+    m_Font: {fileID: 12800000, guid: 6f55ae457b9568c4f88368aabac6a20e, type: 3}
+    m_FontSize: 65
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -2264,14 +2297,14 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'je kan je antwoord eerder
+  m_Text: 'Je kan je antwoord eerder
 
     geven door op "lock" te
 
-    drukken. als
-    je eerder lock
+    drukken. Als
+    je eerder lockt
 
-    word je score vermenigvuldigd
+    wordt je score vermenigvuldigd
 
     met het aantal seconden
 
@@ -2285,6 +2318,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 157206119}
   m_CullTransparentMesh: 0
+--- !u!114 &157206123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 157206119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &171687747
 GameObject:
   m_ObjectHideFlags: 0
@@ -2425,6 +2473,7 @@ GameObject:
   - component: {fileID: 197880764}
   - component: {fileID: 197880766}
   - component: {fileID: 197880765}
+  - component: {fileID: 197880767}
   m_Layer: 5
   m_Name: MemberText1
   m_TagString: 0
@@ -2448,7 +2497,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -388, y: -92}
+  m_AnchoredPosition: {x: -414, y: -92}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &197880765
@@ -2470,8 +2519,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 75
+    m_Font: {fileID: 12800000, guid: 6f55ae457b9568c4f88368aabac6a20e, type: 3}
+    m_FontSize: 69
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -2482,19 +2531,19 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'met deze sliders kan je de
+  m_Text: 'Met deze sliders kan je de
 
-    formule veranderen,
+    formule veranderen.
 
-    het hellingsgetal
+    Het hellingsgetal
     varanderd
 
-    je hoek en het startgetal
+    je hoek. Het startgetal
 
     veranderd je hoogte,
 
     net als
-    bij een lineaire grafiek'
+    bij een lineaire grafiek.'
 --- !u!222 &197880766
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2503,6 +2552,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 197880763}
   m_CullTransparentMesh: 0
+--- !u!114 &197880767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 197880763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &203494507
 GameObject:
   m_ObjectHideFlags: 0
@@ -2752,7 +2816,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh38526
+  m_Name: pb_Mesh17718
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2965,7 +3029,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 6f55ae457b9568c4f88368aabac6a20e, type: 3}
     m_FontSize: 107
     m_FontStyle: 0
     m_BestFit: 0
@@ -2992,7 +3056,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh38754
+  m_Name: pb_Mesh17946
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3289,6 +3353,7 @@ GameObject:
   - component: {fileID: 345086138}
   - component: {fileID: 345086140}
   - component: {fileID: 345086139}
+  - component: {fileID: 345086141}
   m_Layer: 5
   m_Name: MemberText1
   m_TagString: 0
@@ -3334,8 +3399,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 75
+    m_Font: {fileID: 12800000, guid: 6f55ae457b9568c4f88368aabac6a20e, type: 3}
+    m_FontSize: 69
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -3346,12 +3411,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'deze timer laat zien hoeveel
+  m_Text: 'Deze timer laat zien hoeveel
 
     tijd je  nog hebt om je
 
     antwoord
-    te geven'
+    te geven.'
 --- !u!222 &345086140
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3360,6 +3425,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 345086137}
   m_CullTransparentMesh: 0
+--- !u!114 &345086141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 345086137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &353747714
 GameObject:
   m_ObjectHideFlags: 0
@@ -6529,7 +6609,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh38820
+  m_Name: pb_Mesh18012
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6921,7 +7001,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh38814
+  m_Name: pb_Mesh18006
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7412,7 +7492,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh38592
+  m_Name: pb_Mesh17784
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7611,7 +7691,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh38564
+  m_Name: pb_Mesh17756
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7866,7 +7946,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh37482
+  m_Name: pb_Mesh16672
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8220,6 +8300,7 @@ GameObject:
   - component: {fileID: 638454842}
   - component: {fileID: 638454844}
   - component: {fileID: 638454843}
+  - component: {fileID: 638454845}
   m_Layer: 5
   m_Name: MemberText1
   m_TagString: 0
@@ -8243,7 +8324,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -15, y: 688}
+  m_AnchoredPosition: {x: -1, y: 688}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &638454843
@@ -8265,8 +8346,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 80
+    m_Font: {fileID: 12800000, guid: 6f55ae457b9568c4f88368aabac6a20e, type: 3}
+    m_FontSize: 76
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -8277,7 +8358,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "voor een lineaire formule\n zijn twee dingen belangrijk"
+  m_Text: 'Voor een lineaire formule
+
+    zijn twee dingen belangrijk.'
 --- !u!222 &638454844
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8286,6 +8369,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 638454841}
   m_CullTransparentMesh: 0
+--- !u!114 &638454845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 638454841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &647990951
 GameObject:
   m_ObjectHideFlags: 0
@@ -8442,7 +8540,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh38562
+  m_Name: pb_Mesh17754
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9450,7 +9548,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &741440503
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9480,7 +9578,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh38816
+  m_Name: pb_Mesh18008
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9648,6 +9746,7 @@ GameObject:
   - component: {fileID: 802283666}
   - component: {fileID: 802283668}
   - component: {fileID: 802283667}
+  - component: {fileID: 802283669}
   m_Layer: 5
   m_Name: MemberText2
   m_TagString: 1
@@ -9671,7 +9770,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -393, y: 46}
+  m_AnchoredPosition: {x: -407, y: -69}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &802283667
@@ -9693,8 +9792,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 75
+    m_Font: {fileID: 12800000, guid: 6f55ae457b9568c4f88368aabac6a20e, type: 3}
+    m_FontSize: 59
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -9705,8 +9804,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "als je achterelkaar perfecte\nantwoorden haalt krijg je een\nhogere streak,
-    bij een streak\nvan 2 krijg je 2 keer zoveel \npunten, etc."
+  m_Text: "Als je perfecte antwoorden haalt\nkrijg je een hogere streak, bij \neen
+    streak van 2 krijg je 2 keer\nzoveel punten, bij 3 krijg je\n3 keer zoveel.\nAls
+    je geen perfect antwoord haalt\ngaat je streak weer naar 1."
 --- !u!222 &802283668
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9715,13 +9815,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 802283665}
   m_CullTransparentMesh: 0
+--- !u!114 &802283669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 802283665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!43 &810761871
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh38822
+  m_Name: pb_Mesh18014
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9934,7 +10049,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 6f55ae457b9568c4f88368aabac6a20e, type: 3}
     m_FontSize: 107
     m_FontStyle: 0
     m_BestFit: 0
@@ -10185,7 +10300,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: volgende
+  m_Text: Volgende
 --- !u!222 &870649257
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10273,7 +10388,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh38538
+  m_Name: pb_Mesh17730
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10471,7 +10586,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh37420
+  m_Name: pb_Mesh16610
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10804,7 +10919,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh38560
+  m_Name: pb_Mesh17752
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11382,7 +11497,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: volgende
+  m_Text: Volgende
 --- !u!222 &1093057220
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11402,6 +11517,7 @@ GameObject:
   - component: {fileID: 1119128366}
   - component: {fileID: 1119128368}
   - component: {fileID: 1119128367}
+  - component: {fileID: 1119128369}
   m_Layer: 5
   m_Name: MemberText2
   m_TagString: 1
@@ -11447,7 +11563,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 6f55ae457b9568c4f88368aabac6a20e, type: 3}
     m_FontSize: 94
     m_FontStyle: 0
     m_BestFit: 0
@@ -11459,7 +11575,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "dit is de lijn van een \nlineaire formule"
+  m_Text: "Dit is de lijn van een \nlineaire formule."
 --- !u!222 &1119128368
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11468,6 +11584,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1119128365}
   m_CullTransparentMesh: 0
+--- !u!114 &1119128369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1119128365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1135456236
 GameObject:
   m_ObjectHideFlags: 0
@@ -11606,7 +11737,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: volgende
+  m_Text: Volgende
 --- !u!222 &1141320103
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11694,7 +11825,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh37802
+  m_Name: pb_Mesh16992
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12353,7 +12484,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh38818
+  m_Name: pb_Mesh18010
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12695,7 +12826,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 6f55ae457b9568c4f88368aabac6a20e, type: 3}
     m_FontSize: 163
     m_FontStyle: 0
     m_BestFit: 0
@@ -12891,6 +13022,7 @@ GameObject:
   - component: {fileID: 1355255498}
   - component: {fileID: 1355255500}
   - component: {fileID: 1355255499}
+  - component: {fileID: 1355255501}
   m_Layer: 5
   m_Name: MemberText1
   m_TagString: 0
@@ -12936,8 +13068,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 75
+    m_Font: {fileID: 12800000, guid: 6f55ae457b9568c4f88368aabac6a20e, type: 3}
+    m_FontSize: 68
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -12948,12 +13080,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'hier zie je hoe ver je van het
+  m_Text: 'Hier zie je hoe ver je van het
 
     goede antwoord afzit, hoe
 
     kleiner
-    hoe beter'
+    hoe beter.'
 --- !u!222 &1355255500
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12962,13 +13094,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1355255497}
   m_CullTransparentMesh: 0
+--- !u!114 &1355255501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355255497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!43 &1399823008
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh38568
+  m_Name: pb_Mesh17760
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -13232,7 +13379,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh38812
+  m_Name: pb_Mesh18004
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -13589,7 +13736,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 6f55ae457b9568c4f88368aabac6a20e, type: 3}
     m_FontSize: 36
     m_FontStyle: 0
     m_BestFit: 0
@@ -13634,6 +13781,7 @@ GameObject:
   - component: {fileID: 1533040101}
   - component: {fileID: 1533040103}
   - component: {fileID: 1533040102}
+  - component: {fileID: 1533040104}
   m_Layer: 5
   m_Name: MemberText1
   m_TagString: 0
@@ -13679,7 +13827,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 6f55ae457b9568c4f88368aabac6a20e, type: 3}
     m_FontSize: 94
     m_FontStyle: 0
     m_BestFit: 0
@@ -13691,7 +13839,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "dit spel gaat over\n lineaire formules"
+  m_Text: "Dit spel gaat over\n lineaire formules."
 --- !u!222 &1533040103
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13700,6 +13848,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1533040100}
   m_CullTransparentMesh: 0
+--- !u!114 &1533040104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1533040100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1533386933
 GameObject:
   m_ObjectHideFlags: 0
@@ -13758,7 +13921,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh38566
+  m_Name: pb_Mesh17758
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14339,7 +14502,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh38542
+  m_Name: pb_Mesh17734
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14553,7 +14716,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 6f55ae457b9568c4f88368aabac6a20e, type: 3}
     m_FontSize: 185
     m_FontStyle: 0
     m_BestFit: 0
@@ -14861,7 +15024,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: volgende
+  m_Text: Volgende
 --- !u!222 &1669068191
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14876,7 +15039,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh38546
+  m_Name: pb_Mesh17738
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -15117,6 +15280,7 @@ GameObject:
   - component: {fileID: 1718238164}
   - component: {fileID: 1718238166}
   - component: {fileID: 1718238165}
+  - component: {fileID: 1718238167}
   m_Layer: 5
   m_Name: MemberText2
   m_TagString: 1
@@ -15140,7 +15304,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -433, y: 298}
+  m_AnchoredPosition: {x: -427, y: 187}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1718238165
@@ -15162,8 +15326,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 75
+    m_Font: {fileID: 12800000, guid: 6f55ae457b9568c4f88368aabac6a20e, type: 3}
+    m_FontSize: 70
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -15174,9 +15338,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "vul het hellingsgetal in door te\nkijken naar Y-waarde als de\n X-waarde
-    met 1 omhoog gaat.\n\nvul dan het startgetal in door\nde Y-waarde te vinden als
-    de\nX-waarde 0 is."
+  m_Text: "Vul het hellingsgetal met de \ngroene slider in met het \nverschil in
+    Y-waarde als de\nX-waarde met 1 omhoog gaat.\n\nVul dan het startgetal in door\nde
+    Y-waarde te vinden als de\nX-waarde 0 is."
 --- !u!222 &1718238166
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15185,6 +15349,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1718238163}
   m_CullTransparentMesh: 0
+--- !u!114 &1718238167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718238163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1746131241
 GameObject:
   m_ObjectHideFlags: 0
@@ -15514,7 +15693,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: volgende
+  m_Text: Volgende
 --- !u!222 &1803291019
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15785,7 +15964,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 6f55ae457b9568c4f88368aabac6a20e, type: 3}
     m_FontSize: 36
     m_FontStyle: 0
     m_BestFit: 0
@@ -15812,7 +15991,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh38570
+  m_Name: pb_Mesh17762
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -16052,7 +16231,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh38540
+  m_Name: pb_Mesh17732
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -16551,6 +16730,7 @@ GameObject:
   - component: {fileID: 1951187571}
   - component: {fileID: 1951187573}
   - component: {fileID: 1951187572}
+  - component: {fileID: 1951187574}
   m_Layer: 5
   m_Name: MemberText2
   m_TagString: 1
@@ -16596,7 +16776,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 6f55ae457b9568c4f88368aabac6a20e, type: 3}
     m_FontSize: 80
     m_FontStyle: 0
     m_BestFit: 0
@@ -16608,7 +16788,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "1: het startgetal,\n    dit is de hoogte van de \n    lijn wanneer de
+  m_Text: "1: Het startgetal,\n    dit is de hoogte van de \n    lijn wanneer de
     waarde \n    op de x-as 0 is."
 --- !u!222 &1951187573
 CanvasRenderer:
@@ -16618,6 +16798,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1951187570}
   m_CullTransparentMesh: 0
+--- !u!114 &1951187574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951187570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1960959072
 GameObject:
   m_ObjectHideFlags: 0
@@ -16823,7 +17018,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh38544
+  m_Name: pb_Mesh17736
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -17281,7 +17476,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2012489948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17367,8 +17562,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -84, y: 170}
-  m_SizeDelta: {x: 760, y: 65}
+  m_AnchoredPosition: {x: -94, y: 170}
+  m_SizeDelta: {x: 780, y: 65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2013874750
 MonoBehaviour:
@@ -17413,8 +17608,8 @@ MonoBehaviour:
   m_FillRect: {fileID: 412028217}
   m_HandleRect: {fileID: 1575294357}
   m_Direction: 0
-  m_MinValue: -50
-  m_MaxValue: 50
+  m_MinValue: -40
+  m_MaxValue: 40
   m_WholeNumbers: 1
   m_Value: 0
   m_OnValueChanged:
@@ -17487,7 +17682,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 6f55ae457b9568c4f88368aabac6a20e, type: 3}
     m_FontSize: 107
     m_FontStyle: 0
     m_BestFit: 0
@@ -18107,7 +18302,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh38598
+  m_Name: pb_Mesh17790
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
