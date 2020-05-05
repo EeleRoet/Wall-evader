@@ -21,7 +21,7 @@ public class GenerateData : MonoBehaviour
 
         if(round <= 5)
         {
-            hellingsGetal = (float)System.Math.Round(Mathf.Tan(UnityEngine.Random.RandomRange(0, 75) / 180f * Mathf.PI) * 2, MidpointRounding.AwayFromZero) / 2f;
+            hellingsGetal = (float)System.Math.Round(Mathf.Tan(UnityEngine.Random.RandomRange(0, 65) / 180f * Mathf.PI) * 2, MidpointRounding.AwayFromZero) / 2f;
         }
         else if (round <= 12)
         {
