@@ -27,7 +27,7 @@ public class TutorialSequenceScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       //PlayerPrefs.SetInt("runTutorial", 1);
+        //PlayerPrefs.SetInt("runTutorial", 1);
         if(PlayerPrefs.GetInt("runTutorial", 1) == 1)
         {
             foreach(Transform transform in GetComponentInChildren<Transform>(true))

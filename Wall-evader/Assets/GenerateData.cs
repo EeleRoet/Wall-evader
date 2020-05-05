@@ -1,10 +1,12 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class GenerateData : MonoBehaviour
 {
+    private int round = 1;
     Text text;
     Text[] data;
 
@@ -14,11 +16,23 @@ public class GenerateData : MonoBehaviour
     public void GenerateNewData()
     {
        
-        randomY = Random.Range(0, 5);
+        randomY = UnityEngine.Random.Range(0, 5);
         startgetal = randomY;
-        hellingsGetal = (float)System.Math.Round(Mathf.Tan(Random.RandomRange(0, 74) / 180f * Mathf.PI), 1);
 
-        if (Random.Range(0.0f, 1.0f) > 0.5)
+        if(round <= 5)
+        {
+            hellingsGetal = (float)System.Math.Round(Mathf.Tan(UnityEngine.Random.RandomRange(0, 75) / 180f * Mathf.PI) * 2, MidpointRounding.AwayFromZero) / 2f;
+        }
+        else if (round <= 12)
+        {
+            hellingsGetal = (float)System.Math.Round(Mathf.Tan(UnityEngine.Random.RandomRange(0, 46) / 180f * Mathf.PI), 1);
+        }
+        else
+        {
+            hellingsGetal = (float)System.Math.Round(Mathf.Tan(UnityEngine.Random.RandomRange(0, 75) / 180f * Mathf.PI), 1);
+        }
+
+        if (UnityEngine.Random.Range(0.0f, 1.0f) > 0.5)
         {
             hellingsGetal *= -1;
         }
@@ -28,6 +42,7 @@ public class GenerateData : MonoBehaviour
         y_waarde3 = (float)System.Math.Round(startgetal + hellingsGetal * 4, 1);
         
         FillTabel();
+        round++;
     }
 
     private void FillTabel()
