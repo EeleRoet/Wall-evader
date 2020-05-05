@@ -8,7 +8,7 @@ public class HandleParticlesScript : MonoBehaviour
 {
     private static ArrayList particleSystems;
     private static bool runSystems;
-    private static int counter;
+    private static float counter;
     [SerializeField] int effectRunTime;
 
     private void Start()
@@ -30,12 +30,13 @@ public class HandleParticlesScript : MonoBehaviour
     {
         if (runSystems)
         {
-            if(++counter > effectRunTime)
+            if(counter > effectRunTime)
             {
                 runSystems = false;
                 counter = 0;
                 StopParticleSystems();
             }
+            counter += Time.deltaTime;
         }
     }
 

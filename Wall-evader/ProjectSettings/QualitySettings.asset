@@ -192,7 +192,7 @@ QualitySettings:
     - Android
   - serializedVersion: 2
     name: Ultra
-    pixelLightCount: 10
+    pixelLightCount: 7
     shadows: 1
     shadowResolution: 1
     shadowProjection: 1

@@ -13577,7 +13577,7 @@ GameObject:
   - component: {fileID: 1411137113}
   - component: {fileID: 1411137112}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: ParticleSystemHandler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13595,7 +13595,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5d64f87ba5c40049a040b8ebda50f8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  effectRunTime: 200
+  effectRunTime: 2
 --- !u!4 &1411137113
 Transform:
   m_ObjectHideFlags: 0
@@ -13937,7 +13937,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh60268
+  m_Name: pb_Mesh44938
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
