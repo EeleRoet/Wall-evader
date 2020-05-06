@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class CustomMenu : MonoBehaviour
 {
+
+    
     public void PlayGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
@@ -17,4 +19,13 @@ public class CustomMenu : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 3);
         Debug.Log("pls");
     }
+
+    public void UnlockedCustom()
+        {
+
+
+
+        }
+
+
 }
