@@ -31,7 +31,6 @@ public class viewObstructionScript : MonoBehaviour
              material.color = color;
              if(color.a <= 0)
              {
-                 Debug.Log("cheff");
                  fadeObstruction = false;
              }
         }
