@@ -1750,7 +1750,6 @@ MonoBehaviour:
   dataScript: {fileID: 252347000}
   dynamicCamera: {fileID: 963194229}
   pIn: {fileID: 688928306}
-  explosion: {fileID: 0}
 --- !u!43 &104690229
 Mesh:
   m_ObjectHideFlags: 0
@@ -16344,7 +16343,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1929800308
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17282,7 +17281,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2012489948
 MonoBehaviour:
   m_ObjectHideFlags: 0
