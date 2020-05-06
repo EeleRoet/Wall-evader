@@ -35,4 +35,9 @@ public class MoveWall : MonoBehaviour
     {
         speed = SerializeSpeed;
     }
+
+    public void StopWall()
+    {
+        speed = 0;
+    }
 }

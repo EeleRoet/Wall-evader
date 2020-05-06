@@ -6,20 +6,24 @@ using UnityEngine.UI;
 public class Explosion : MonoBehaviour
 {
     public pInput pIn;
+    [SerializeField] private DynamicCamera cameraScript; 
     public Slider slider;
     public MoveWall mWall;
     public Canvas canvas;
-    public ScoreCalcAnimations SCA;
+    public GameObject scoreAnimation;
     public Text scoreCalc;
+    private System.Random r = new System.Random();
+    [SerializeField] private GameObject ExplosionBlocks;
 
-
-    public float explosionSize = 0.5f;
-    public int explosionRow = 2;
+    private bool switchedCameraFollow = false;
+    public float explosionSize = 0.3f;
+    public int explosionRow = 3;
     public bool ExplosionGameover = false;
 
-    public float timer = 3;
+    public float timer = 1.5f;
 
 
+  
 
     public void Explode()
     {
@@ -29,59 +33,37 @@ public class Explosion : MonoBehaviour
 
         GetComponent<MeshRenderer>().enabled = false;
         GetComponent<MeshCollider>().enabled = false;
+        scoreAnimation.SetActive(false);
 
 
-
-        for (int x = 0; x < explosionRow; x++)
-        {
-            for (int y = 0; y < explosionRow; y++)
-            {
-                for (int z = 0; z < explosionRow; z++)
-                {
-
-                    createExplosion(x, y, z);
-                    
-
-
-                }
-            }
-        }
-
-        
-
+       
+        Time.timeScale = 0.5f;
+        mWall.StopWall();
+        cameraScript.zoomIn = false;
+        createExplosion();
     }
 
-    void createExplosion(float x, float y, float z)
+    void createExplosion()
     {
+        ExplosionBlocks.SetActive(true);
+        ExplosionBlocks.transform.position = this.transform.position;
+        ExplosionBlocks.transform.rotation = this.transform.rotation;
 
-        //maakt het object aan
-        GameObject explosionCube;
-        explosionCube = GameObject.CreatePrimitive(PrimitiveType.Cube);
-
-
-        //bepaald de positie
-        explosionCube.transform.position = gameObject.transform.position + new Vector3((explosionSize * x) - explosionSize, (explosionSize * y) - explosionSize, (explosionSize * z) - explosionSize );
-        explosionCube.transform.rotation = gameObject.transform.rotation;
-        explosionCube.transform.localScale = new Vector3(explosionSize, explosionSize, explosionSize);
-
-        //maakt een rigidbody aan
-        explosionCube.AddComponent<Rigidbody>();
-        explosionCube.GetComponent<Rigidbody>().mass = explosionSize;
-        explosionCube.GetComponent<Rigidbody>().angularVelocity.z.Equals(Random.Range(-10f,10f));
-
-        explosionCube.AddComponent<BoxCollider>();
-        explosionCube.GetComponent<BoxCollider>();
-
-
-        if(explosionCube.transform.position.y <= 0.5)
+        foreach(Transform transform in ExplosionBlocks.GetComponentInChildren<Transform>(true))
         {
+            if (transform.gameObject.GetComponent<Rigidbody>())
+            {
+                if (!switchedCameraFollow)
+                {
+                    cameraScript.SwitchTargets(transform);
+                    switchedCameraFollow = true;
+                }
 
-            explosionCube.transform.position.y.Equals(0.5);
 
+                transform.gameObject.GetComponent<Rigidbody>().angularVelocity = new Vector3(r.Next(-100, 100), r.Next(-100, 100), r.Next(-100, 100));
+                transform.gameObject.GetComponent<Rigidbody>().velocity = mWall.gameObject.GetComponent<Rigidbody>().velocity;
+            }
         }
-
-
-
     }
 
    

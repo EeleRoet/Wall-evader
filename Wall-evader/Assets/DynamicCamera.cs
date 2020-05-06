@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class DynamicCamera : MonoBehaviour
 {
-    public Transform target;
+    private Transform target;
+    [SerializeField] private Transform fullPlayerTarget;
+    private Transform explodedPlayerTarget;
 
     public float smoothSpeed = 0.125f;
     public Vector3 offset;
@@ -15,6 +17,7 @@ public class DynamicCamera : MonoBehaviour
     void Start()
     {
         zoomIn = false;
+        target = fullPlayerTarget;
     }
 
     void LateUpdate()
@@ -28,6 +31,12 @@ public class DynamicCamera : MonoBehaviour
             cameraZoom();
         }
 
+    }
+
+    public void SwitchTargets(Transform explodedTransform)
+    {
+        explodedPlayerTarget = explodedTransform;
+        target = explodedPlayerTarget;
     }
 
     void cameraZoom()
