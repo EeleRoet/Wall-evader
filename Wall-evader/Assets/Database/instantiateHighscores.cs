@@ -30,10 +30,17 @@ public class instantiateHighscores : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
 
-        for (int i = 0; i < (tableData.allScores.Count - 1) / 2; i++)
+        if (tableData.allScores.Count != 0)
         {
-            GameObject testing = Instantiate(prefab, new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
-            testing.transform.SetParent(GameObject.FindGameObjectWithTag("Canvas").transform, false);
+            for (int i = 0; i < (tableData.allScores.Count - 1) / 2; i++)
+            {
+                GameObject testing = Instantiate(prefab, new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
+                testing.transform.SetParent(GameObject.FindGameObjectWithTag("Canvas").transform, false);
+            }
+        }
+        else
+        {
+            print("No scores in DB");
         }
 
         foreach (Text text in GetComponentsInChildren<Text>(true))

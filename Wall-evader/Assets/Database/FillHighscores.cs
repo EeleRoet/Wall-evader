@@ -15,14 +15,12 @@ public class FillHighscores : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        print(PlayerPrefs.GetString("Login", "nothing found"));
         StartCoroutine(wait());
     }
 
     // Update is called once per frame
     void Update()
     {
-
         for (int i = 0; i < tabelText.Count; i++)
         {
             tabelText[i].text = accounts.allScores[i];
