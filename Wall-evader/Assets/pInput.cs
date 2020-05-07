@@ -30,7 +30,7 @@ public class pInput : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        timer = 9;
+        timer = 15;
         timerDeath = 1;
         target = GetComponent<Transform>();
         rbody = GetComponent<Rigidbody>();
@@ -120,7 +120,7 @@ public class pInput : MonoBehaviour
     public void timerReset()
     {
         cTimer.enabled = true;
-        timer = 9f;
+        timer = 15f;
         slide.interactable = true;
         slide_verhoging.interactable = true;
         resetTimer = false;

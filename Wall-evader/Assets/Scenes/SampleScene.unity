@@ -1267,6 +1267,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a62d8ca45609de14eb8615717de1556b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mRender: {fileID: 0}
+  material: {fileID: 0}
 --- !u!114 &26227399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4643,7 +4645,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 209239155}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.781, z: -4.29}
+  m_LocalPosition: {x: 0, y: -1.781, z: -5}
   m_LocalScale: {x: 3, y: 0.5, z: 0.1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5220,6 +5222,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a62d8ca45609de14eb8615717de1556b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mRender: {fileID: 0}
+  material: {fileID: 0}
 --- !u!114 &268483290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10471,7 +10475,7 @@ RectTransform:
   - {fileID: 1995628490}
   - {fileID: 1059040616}
   m_Father: {fileID: 1960959076}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -11233,6 +11237,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a62d8ca45609de14eb8615717de1556b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mRender: {fileID: 0}
+  material: {fileID: 0}
 --- !u!114 &421702698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12403,7 +12409,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh73826
+  m_Name: pb_Mesh43038
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -16030,6 +16036,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a62d8ca45609de14eb8615717de1556b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mRender: {fileID: 0}
+  material: {fileID: 0}
 --- !u!114 &679447837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16964,6 +16972,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a62d8ca45609de14eb8615717de1556b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mRender: {fileID: 0}
+  material: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -17625,6 +17635,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a62d8ca45609de14eb8615717de1556b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mRender: {fileID: 0}
+  material: {fileID: 0}
 --- !u!114 &729148672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18033,7 +18045,7 @@ RectTransform:
   - {fileID: 336679487}
   - {fileID: 1334803628}
   m_Father: {fileID: 1960959076}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -18513,6 +18525,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a62d8ca45609de14eb8615717de1556b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mRender: {fileID: 0}
+  material: {fileID: 0}
 --- !u!114 &785538664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19863,6 +19877,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a62d8ca45609de14eb8615717de1556b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mRender: {fileID: 0}
+  material: {fileID: 0}
 --- !u!114 &864082350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21179,7 +21195,7 @@ RectTransform:
   - {fileID: 921083858}
   - {fileID: 1471608880}
   m_Father: {fileID: 1960959076}
-  m_RootOrder: 6
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -27512,7 +27528,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh74046
+  m_Name: pb_Mesh43258
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -29971,6 +29987,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a62d8ca45609de14eb8615717de1556b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mRender: {fileID: 0}
+  material: {fileID: 0}
 --- !u!114 &1629098265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30651,7 +30669,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1960959076}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -31430,6 +31448,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a62d8ca45609de14eb8615717de1556b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mRender: {fileID: 0}
+  material: {fileID: 0}
 --- !u!114 &1687271833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35907,7 +35927,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 255, y: -675}
+  m_AnchoredPosition: {x: 417, y: -428}
   m_SizeDelta: {x: 180, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1914774395
@@ -36390,10 +36410,10 @@ RectTransform:
   - {fileID: 1532085226}
   - {fileID: 658398227}
   - {fileID: 1305670830}
+  - {fileID: 944818575}
   - {fileID: 741440503}
   - {fileID: 391853428}
   - {fileID: 1644991062}
-  - {fileID: 944818575}
   - {fileID: 1228282477}
   - {fileID: 1929800308}
   m_Father: {fileID: 0}
@@ -39132,7 +39152,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh73832
+  m_Name: pb_Mesh43044
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -73268,7 +73288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
-  SerializeSpeed: 2
+  SerializeSpeed: 1.2
   scoreTriggerTransform: {fileID: 209239160}
 --- !u!4 &6682497556667564092
 Transform:
