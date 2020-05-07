@@ -9,8 +9,6 @@ public class SelectAvatar : MonoBehaviour
     public void selectDefault()
     {
 
-        mRender.materials = material.;
-
     }
 
 
