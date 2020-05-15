@@ -52,6 +52,7 @@ public class GenerateData : MonoBehaviour
         
         FillTabel();
         round++;
+        Reset();
     }
 
     private void FillTabel()
@@ -86,5 +87,11 @@ public class GenerateData : MonoBehaviour
         {
             x_waardes_tabel[i].text = x_waardes[i].ToString();
         }
+    }
+
+    private void Reset()
+    {
+        x_waardes.Clear();
+        baseValue = 0;
     }
 }
