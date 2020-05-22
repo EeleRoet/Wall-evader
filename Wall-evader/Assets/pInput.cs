@@ -20,6 +20,8 @@ public class pInput : MonoBehaviour
     public Button button;
     public Text CountdownText;
     public Explosion explosion;
+    Material material;
+    [SerializeField] private ColorSelector cSelector;
 
 
 
@@ -39,6 +41,7 @@ public class pInput : MonoBehaviour
 
 
         target.position = new Vector3(0f, 0.5f, -4.25f);
+
 
     }
 

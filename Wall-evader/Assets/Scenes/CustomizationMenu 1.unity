@@ -202,7 +202,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 82658023}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2136703989}
+        m_MethodName: OrangePlayer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &82658023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -320,7 +331,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 93456831}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2136703989}
+        m_MethodName: GreenPlayer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &93456831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -438,7 +460,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 428713499}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2136703989}
+        m_MethodName: PinkPlayer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &428713499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -793,7 +826,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 752593517}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2136703989}
+        m_MethodName: BlueSPlayer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &752593517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -977,7 +1021,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 914085002}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2136703989}
+        m_MethodName: OrangeSPlayer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &914085002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1095,7 +1150,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 970375922}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2136703989}
+        m_MethodName: DefaultPlayer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &970375922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1290,7 +1356,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1081301943}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2136703989}
+        m_MethodName: BluePlayer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1081301943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1408,7 +1485,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1095912559}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2136703989}
+        m_MethodName: PinkSPlayer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1095912559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2096,7 +2184,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1561780783}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2136703989}
+        m_MethodName: GreenSPlayer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1561780783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2816,7 +2915,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2064003848}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2136703989}
+        m_MethodName: GoldPlayer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2064003848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3085,3 +3195,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9afe2c520f33f914685c992cc89d9e39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 2114985413429131265, guid: 0eed20855b660384ab3adb292f5fde1c, type: 3}
+  colorChange: {fileID: 8208823626589229163, guid: 0eed20855b660384ab3adb292f5fde1c,
+    type: 3}
