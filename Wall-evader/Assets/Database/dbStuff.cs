@@ -11,6 +11,8 @@ public class dbStuff : MonoBehaviour
 
     public Button submit;
 
+    public Text warningText;
+
     private string login;
 
     public void Start()
@@ -48,6 +50,10 @@ public class dbStuff : MonoBehaviour
                 else
                 {
                     print(www.downloadHandler.text);
+                    if (www.downloadHandler.text.Contains("exists"))
+                    {
+                        warningText.gameObject.SetActive(true);
+                    }
                 }
             }
         }
@@ -55,7 +61,7 @@ public class dbStuff : MonoBehaviour
 
     public void VerifyInputs()
     {
-        submit.interactable = (nameField.text.Length >= 2);
+        submit.interactable = nameField.text.Length >= 2;
     }
 
     public void LogIn()
