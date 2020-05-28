@@ -3076,6 +3076,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 208d090feb2c6a041bf3cb8a6a40897d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UnlockScore: 0
+  greenButton: {fileID: 93456830}
+  blueButton: {fileID: 1081301942}
+  orangeButton: {fileID: 82658022}
+  pinkButton: {fileID: 428713498}
+  greenSButton: {fileID: 1561780782}
+  blueSButton: {fileID: 752593516}
+  orangeSButton: {fileID: 914085001}
+  pinkSButton: {fileID: 1095912558}
+  goldButton: {fileID: 2064003847}
 --- !u!114 &2136703984
 MonoBehaviour:
   m_ObjectHideFlags: 0
